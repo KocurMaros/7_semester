@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;vrs_cv2_ll_programming/Inc/assigment.h&apos; to &apos;assignment.h&apos;" description="Rename resource &apos;assigment.h&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="Inc/assigment.h" name="assignment.h" stamp="1695712017617" updateReferences="true"/>
+</session>

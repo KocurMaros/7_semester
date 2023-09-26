@@ -5,7 +5,7 @@ close all;
 numgen=750;	% number of generations
 lpop=50;	% number of chromosomes in population
 lstring=10;	% number of genes in a chromosome
-M=750;          % maximum of the search space
+M=500;          % maximum of the search space
 
 figure(1); hold on;
 
@@ -49,6 +49,7 @@ for i=1:10
 end
 ap_all(1,:) = AP/10;
 plot (AP/10, 'r--', 'LineWidth',2);
+saveas(figure(1),'exam1/test/vtnd.jpg');
 % -------------------------------------------------
 AP = 0;
 % Main cyklus  ---------------------------------
@@ -82,7 +83,7 @@ for i=1:10
 end
 ap_all(2,:) = AP/10;
 plot (AP/10, 'r--', 'LineWidth',2);
-
+saveas(figure(2),'exam1/test/vtvd.jpg');
 AP = 0;
 % Main cyklus ---------------------------------
 for i=1:10
@@ -97,7 +98,7 @@ for i=1:10
         Best=selbest(Pop,Fit,[1,0,0]);
         Old=selrand(Pop,Fit,20);
         Work1 = selrand(Pop,Fit,12);
-        Work2 = seltourn(Pop,Fit,15);
+        Work2 = seltourn(Pop,Fit,8);
         Work1=crossov(Work1,1,0);
         Work2=mutx(Work2,0.08,Space);
         Work2=muta(Work2,0.1,Delta,Space);
@@ -115,6 +116,7 @@ for i=1:10
 end
 ap_all(3,:) = AP/10;
 plot (AP/10, 'r--', 'LineWidth',2);
+saveas(figure(3),'exam1/test/ntnd.jpg');
 % -------------------------------------------------
 AP = 0;
 % Main cyklus ---------------------------------
@@ -148,9 +150,11 @@ for i=1:10
 end
 ap_all(4,:) = AP/10;
 plot (AP/10, 'r--', 'LineWidth',2);
+saveas(figure(4),'exam1/test/ntvd.jpg');
 for i = 1:4
     figure(5);
     hold on
     plot(ap_all(i,:))
     legend("VTND","VTVD","NTND","NTVD")
 end
+saveas(figure(5),'exam1/test/all.jpg');

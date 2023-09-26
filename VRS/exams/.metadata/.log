@@ -952,3 +952,193 @@ java.io.FileNotFoundException: /home/laptop/school/VRS/exams/vrs_cvicenie_1/vrs_
 
 !ENTRY com.st.stm32cube.common.projectcreation 4 0 2023-09-23 13:28:56.736
 !MESSAGE Project is null
+!SESSION 2023-09-23 17:14:45.720 -----------------------------------------------
+eclipse.buildId=Version 1.13.2
+java.version=17.0.6
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Command-line arguments:  -os linux -ws gtk -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2023-09-23 17:14:49.374
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2023-09-23 17:14:49.375
+!MESSAGE Log4j2 initialized with config file /home/laptop/school/VRS/exams/.metadata/.log4j2.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2023-09-23 17:14:53.365
+!MESSAGE Started RMI Server, listening on port 41337
+!SESSION 2023-09-25 11:13:57.976 -----------------------------------------------
+eclipse.buildId=Version 1.13.2
+java.version=17.0.6
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Command-line arguments:  -os linux -ws gtk -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2023-09-25 11:14:01.776
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2023-09-25 11:14:01.777
+!MESSAGE Log4j2 initialized with config file /home/laptop/school/VRS/exams/.metadata/.log4j2.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2023-09-25 11:14:05.882
+!MESSAGE Started RMI Server, listening on port 41337
+!SESSION 2023-09-25 14:26:37.013 -----------------------------------------------
+eclipse.buildId=Version 1.13.2
+java.version=17.0.6
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Command-line arguments:  -os linux -ws gtk -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2023-09-25 14:26:40.132
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2023-09-25 14:26:40.132
+!MESSAGE Log4j2 initialized with config file /home/laptop/school/VRS/exams/.metadata/.log4j2.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2023-09-25 14:26:50.395
+!MESSAGE Started RMI Server, listening on port 41337
+
+!ENTRY org.eclipse.core.resources 4 77 2023-09-25 14:31:21.565
+!MESSAGE Invalid project description.
+!SUBENTRY 1 unknown 0 0 2023-09-25 14:31:21.565
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2023-09-25 14:31:21.565
+!MESSAGE /home/laptop/school/VRS/exams/vrs_cvicenie_1 overlaps the location of another project: 'vrs_cvicenie_1'
+
+!ENTRY com.st.stm32cube.common.projectcreation 4 0 2023-09-25 14:31:21.568
+!MESSAGE Project is null
+
+!ENTRY org.eclipse.core.resources 4 77 2023-09-25 14:32:28.194
+!MESSAGE Invalid project description.
+!SUBENTRY 1 unknown 0 0 2023-09-25 14:32:28.194
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2023-09-25 14:32:28.194
+!MESSAGE /home/laptop/school/VRS/exams/vrs_cvicenie_1 overlaps the location of another project: 'vrs_cvicenie_1'
+
+!ENTRY com.st.stm32cube.common.projectcreation 4 0 2023-09-25 14:32:28.194
+!MESSAGE Project is null
+
+!ENTRY org.eclipse.core.resources 4 77 2023-09-25 14:32:28.236
+!MESSAGE Invalid project description.
+!SUBENTRY 1 unknown 0 0 2023-09-25 14:32:28.236
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2023-09-25 14:32:28.236
+!MESSAGE /home/laptop/school/VRS/exams/vrs_cvicenie_1 overlaps the location of another project: 'vrs_cvicenie_1'
+
+!ENTRY com.st.stm32cube.common.projectcreation 4 0 2023-09-25 14:32:28.236
+!MESSAGE Project is null
+
+!ENTRY org.eclipse.core.resources 4 77 2023-09-25 15:25:57.324
+!MESSAGE Invalid project description.
+!SUBENTRY 1 unknown 0 0 2023-09-25 15:25:57.324
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2023-09-25 15:25:57.324
+!MESSAGE /home/laptop/school/VRS/exams/vrs_cvicenie_1 overlaps the location of another project: 'vrs_cvicenie_1'
+
+!ENTRY com.st.stm32cube.common.projectcreation 4 0 2023-09-25 15:25:57.324
+!MESSAGE Project is null
+!SESSION 2023-09-25 15:45:15.785 -----------------------------------------------
+eclipse.buildId=Version 1.13.2
+java.version=17.0.6
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Command-line arguments:  -os linux -ws gtk -arch x86_64
+
+!ENTRY org.eclipse.core.resources 2 10035 2023-09-25 15:45:16.660
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2023-09-25 15:45:18.707
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2023-09-25 15:45:18.708
+!MESSAGE Log4j2 initialized with config file /home/laptop/school/VRS/exams/.metadata/.log4j2.xml
+!SESSION 2023-09-25 15:47:34.341 -----------------------------------------------
+eclipse.buildId=Version 1.13.2
+java.version=17.0.6
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Command-line arguments:  -os linux -ws gtk -arch x86_64
+
+!ENTRY org.eclipse.core.resources 2 10035 2023-09-25 15:47:35.336
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2023-09-25 15:47:37.954
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2023-09-25 15:47:37.955
+!MESSAGE Log4j2 initialized with config file /home/laptop/school/VRS/exams/.metadata/.log4j2.xml
+!SESSION 2023-09-25 15:49:07.197 -----------------------------------------------
+eclipse.buildId=Version 1.13.2
+java.version=17.0.6
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Command-line arguments:  -os linux -ws gtk -arch x86_64
+
+!ENTRY org.eclipse.core.resources 2 10035 2023-09-25 15:49:08.059
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2023-09-25 15:49:09.997
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2023-09-25 15:49:09.997
+!MESSAGE Log4j2 initialized with config file /home/laptop/school/VRS/exams/.metadata/.log4j2.xml
+!SESSION 2023-09-25 15:51:49.787 -----------------------------------------------
+eclipse.buildId=Version 1.13.2
+java.version=17.0.6
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Command-line arguments:  -os linux -ws gtk -arch x86_64
+
+!ENTRY org.eclipse.core.resources 2 10035 2023-09-25 15:51:50.688
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2023-09-25 15:51:52.686
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2023-09-25 15:51:52.686
+!MESSAGE Log4j2 initialized with config file /home/laptop/school/VRS/exams/.metadata/.log4j2.xml
+!SESSION 2023-09-25 17:15:24.967 -----------------------------------------------
+eclipse.buildId=Version 1.13.2
+java.version=17.0.6
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Command-line arguments:  -os linux -ws gtk -arch x86_64
+
+!ENTRY org.eclipse.core.resources 2 10035 2023-09-25 17:15:25.767
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2023-09-25 17:15:27.765
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2023-09-25 17:15:27.765
+!MESSAGE Log4j2 initialized with config file /home/laptop/school/VRS/exams/.metadata/.log4j2.xml
+!SESSION 2023-09-25 17:48:09.276 -----------------------------------------------
+eclipse.buildId=Version 1.13.2
+java.version=17.0.6
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Command-line arguments:  -os linux -ws gtk -arch x86_64
+
+!ENTRY org.eclipse.core.resources 2 10035 2023-09-25 17:48:20.936
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2023-09-25 17:48:22.622
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2023-09-25 17:48:22.622
+!MESSAGE Log4j2 initialized with config file /home/laptop/school/VRS/exams/.metadata/.log4j2.xml
+!SESSION 2023-09-25 18:40:00.567 -----------------------------------------------
+eclipse.buildId=Version 1.13.2
+java.version=17.0.6
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Command-line arguments:  -os linux -ws gtk -arch x86_64
+
+!ENTRY org.eclipse.core.resources 2 10035 2023-09-25 18:40:08.737
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2023-09-25 18:40:10.513
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2023-09-25 18:40:10.513
+!MESSAGE Log4j2 initialized with config file /home/laptop/school/VRS/exams/.metadata/.log4j2.xml
