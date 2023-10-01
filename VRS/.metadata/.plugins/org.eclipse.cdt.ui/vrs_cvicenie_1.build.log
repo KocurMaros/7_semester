@@ -1,21 +1,16 @@
-16:13:57 **** Incremental Build of configuration Debug for project vrs_cvicenie_1 ****
+17:50:55 **** Build of configuration Debug for project vrs_cvicenie_1 ****
 make -j12 all 
-arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32F303x8 -DDEBUG -c -I../Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32F3xx_HAL_Driver/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F3xx/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
-../Src/main.c: In function 'main':
-../Src/main.c:77:8: warning: variable 'prev_value' set but not used [-Wunused-but-set-variable]
-   77 |   bool prev_value = 1;
-      |        ^~~~~~~~~~
 arm-none-eabi-gcc -o "vrs_cvicenie_1.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/laptop/school/VRS/vrs_cvicenie_1/STM32F303K8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="vrs_cvicenie_1.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 Finished building target: vrs_cvicenie_1.elf
  
 arm-none-eabi-size   vrs_cvicenie_1.elf 
 arm-none-eabi-objdump -h -S  vrs_cvicenie_1.elf  > "vrs_cvicenie_1.list"
    text	   data	    bss	    dec	    hex	filename
-   1312	      8	   1568	   2888	    b48	vrs_cvicenie_1.elf
+   1520	     12	   1564	   3096	    c18	vrs_cvicenie_1.elf
 Finished building: default.size.stdout
  
 Finished building: vrs_cvicenie_1.list
  
 
-16:13:58 Build Finished. 0 errors, 1 warnings. (took 218ms)
+17:50:55 Build Finished. 0 errors, 0 warnings. (took 175ms)
 

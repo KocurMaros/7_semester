@@ -2,7 +2,7 @@
 % Ivan Sekaj, 2022
 % ==================
 close all;
-numgen=750;	% number of generations
+numgen=500;	% number of generations
 lpop=50;	% number of chromosomes in population
 lstring=10;	% number of genes in a chromosome
 M=500;          % maximum of the search space
@@ -30,7 +30,7 @@ for i=1:10
         % GA
         Best=selbest(Pop,Fit,[15,10]);
         Old=selrand(Pop,Fit,4);
-        Work1 = seltourn(Pop,Fit,7);
+        Work1 = seltourn(Pop,Fit,14);
         Work2 = selsus(Pop,Fit,7);
         Work1=crossov(Work1,1,0);
         Work2=mutx(Work2,0.05,Space);
@@ -64,7 +64,7 @@ for i=1:10
         % GA
         Best=selbest(Pop,Fit,[15,10]);
         Old=selrand(Pop,Fit,4);
-        Work1 = selrand(Pop,Fit,7);
+        Work1 = selrand(Pop,Fit,14);
         Work2 = selsus(Pop,Fit,7);
         Work1=crossov(Work1,1,0);
         Work2=mutx(Work2,0.2,Space);
@@ -97,8 +97,8 @@ for i=1:10
         % GA
         Best=selbest(Pop,Fit,[1,0,0]);
         Old=selrand(Pop,Fit,20);
-        Work1 = selrand(Pop,Fit,12);
-        Work2 = seltourn(Pop,Fit,8);
+        Work1 = selrand(Pop,Fit,17);
+        Work2 = seltourn(Pop,Fit,12);
         Work1=crossov(Work1,1,0);
         Work2=mutx(Work2,0.08,Space);
         Work2=muta(Work2,0.1,Delta,Space);
@@ -131,11 +131,11 @@ for i=1:10
         % GA
         Best=selbest(Pop,Fit,[1,0,0]);
         Old=selrand(Pop,Fit,20);
-        Work1 = selrand(Pop,Fit,10);
-        Work2 = seltourn(Pop,Fit,10);
+        Work1 = selrand(Pop,Fit,17);
+        Work2 = seltourn(Pop,Fit,12);
         Work1=crossov(Work1,1,0);
         Work2=mutx(Work2,0.3,Space);
-        Work2=muta(Work2,0.4,Delta,Space);
+        Work2=muta(Work2,0.3,Delta,Space);
         Pop=[Best;Old;Work1;Work2];
     
     end;  % gen
@@ -151,10 +151,41 @@ end
 ap_all(4,:) = AP/10;
 plot (AP/10, 'r--', 'LineWidth',2);
 saveas(figure(4),'exam1/test/ntvd.jpg');
-for i = 1:4
+AP = 0;
+for i=1:10
+    Pop=genrpop(lpop,Space);
+    for gen=1:numgen
+
+        Fit=testfn3(Pop);
+
+        evolution(gen)=min(Fit);	% convergence graph of the solution
+
+        % GA
+        Best=selbest(Pop,Fit,[15,5]);
+        Old=selrand(Pop,Fit,5);
+        Work1 = selsus(Pop,Fit,10);
+        Work2 = selsus(Pop,Fit,15);
+        Work1=crossov(Work1,1,0);
+        Work2=mutx(Work2,0.1,Space);
+        Work2=muta(Work2,0.08,Delta,Space);
+        Pop=[Best;Old;Work1;Work2];
+
+    end;  % gen
+    % Best solution
+    AP = AP + evolution;
+    figure(6);
+    plot(evolution);
+    title('kompromis');
+    xlabel('generation');
+    ylabel('fitness');
+    hold on 
+end
+ap_all(5,:) = AP/10;
+plot (AP/10, 'r--', 'LineWidth',2);
+for i = 1:5
     figure(5);
     hold on
     plot(ap_all(i,:))
-    legend("VTND","VTVD","NTND","NTVD")
+    legend("VTND","VTVD","NTND","NTVD","Kompromis")
 end
 saveas(figure(5),'exam1/test/all.jpg');

@@ -30,7 +30,7 @@ for i=1:10
         % GA
         Best=selbest(Pop,Fit,[15,10]);
         Old=selrand(Pop,Fit,4);
-        Work1 = selrand(Pop,Fit,7);
+        Work1 = selrand(Pop,Fit,14);
         Work2 = selsus(Pop,Fit,7);
         % Work1=crossov(Work1,1,0);
         Work2=mutx(Work2,0.2,Space);
@@ -49,6 +49,8 @@ for i=1:10
 end
 ap_all(2,:) = AP/10;
 plot (AP/10, 'r--', 'LineWidth',2);
+figure(5); hold on
+plot (AP/10);
 saveas(figure(1),'exam1/test/vtvd-f.jpg');
 
 
@@ -84,6 +86,8 @@ for i=1:10
 end
 ap_all(2,:) = AP/10;
 plot (AP/10, 'r--', 'LineWidth',2);
+figure(5)
+plot (AP/10);
 saveas(figure(2),'exam1/test/vtvd-g.jpg');
 
 AP = 0;
@@ -118,6 +122,8 @@ for i=1:10
 end
 ap_all(2,:) = AP/10;
 plot (AP/10, 'r--', 'LineWidth',2);
+figure(5)
+plot (AP/10);
 saveas(figure(3),'exam1/test/vtvd-h.jpg');
 
 AP = 0;
@@ -152,4 +158,8 @@ for i=1:10
 end
 ap_all(2,:) = AP/10;
 plot (AP/10, 'r--', 'LineWidth',2);
+figure(5)
+plot (AP/10);
+legend("cross","global","lokal","both mutacie");
+saveas(figure(5),'exam1/test/all-f-i.jpg');
 saveas(figure(4),'exam1/test/vtvd-i.jpg');

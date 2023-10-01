@@ -1,179 +1,350 @@
-16:08:30 **** Incremental Build of configuration Debug for project vrs_cvicenie_1 ****
+16:54:49 **** Clean-only build of configuration Debug for project vrs_cvicenie_1 ****
+make -j12 clean 
+rm -rf ./Startup/startup_stm32f303k8tx.d ./Startup/startup_stm32f303k8tx.o
+rm -rf ./Src/main.cyclo ./Src/main.d ./Src/main.o ./Src/main.su ./Src/stm32f3xx_it.cyclo ./Src/stm32f3xx_it.d ./Src/stm32f3xx_it.o ./Src/stm32f3xx_it.su ./Src/syscalls.cyclo ./Src/syscalls.d ./Src/syscalls.o ./Src/syscalls.su ./Src/sysmem.cyclo ./Src/sysmem.d ./Src/sysmem.o ./Src/sysmem.su ./Src/system_stm32f3xx.cyclo ./Src/system_stm32f3xx.d ./Src/system_stm32f3xx.o ./Src/system_stm32f3xx.su
+rm -rf ./Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_ll_exti.cyclo ./Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_ll_exti.d ./Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_ll_exti.o ./Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_ll_exti.su ./Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_ll_gpio.cyclo ./Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_ll_gpio.d ./Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_ll_gpio.o ./Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_ll_gpio.su ./Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_ll_rcc.cyclo ./Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_ll_rcc.d ./Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_ll_rcc.o ./Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_ll_rcc.su ./Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_ll_utils.cyclo ./Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_ll_utils.d ./Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_ll_utils.o ./Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_ll_utils.su
+rm -rf default.size.stdout vrs_cvicenie_1.elf vrs_cvicenie_1.list vrs_cvicenie_1.map
+ 
+16:54:58 **** Build of configuration Debug for project vrs_cvicenie_1_edo ****
+make -j12 all 
+arm-none-eabi-gcc -mcpu=cortex-m4 -g3 -c -I../ -x assembler-with-cpp -MMD -MP -MF"Startup/startup_stm32f303k8tx.d" -MT"Startup/startup_stm32f303k8tx.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Startup/startup_stm32f303k8tx.o" "../Startup/startup_stm32f303k8tx.s"
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32F303x8 -DDEBUG -c -I../Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32F3xx_HAL_Driver/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F3xx/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc "../Src/stm32f3xx_it.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32F303x8 -DDEBUG -c -I../Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32F3xx_HAL_Driver/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F3xx/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/stm32f3xx_it.d" -MT"Src/stm32f3xx_it.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/stm32f3xx_it.o"
+arm-none-eabi-gcc "../Src/syscalls.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32F303x8 -DDEBUG -c -I../Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32F3xx_HAL_Driver/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F3xx/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/syscalls.d" -MT"Src/syscalls.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/syscalls.o"
+arm-none-eabi-gcc "../Src/sysmem.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32F303x8 -DDEBUG -c -I../Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32F3xx_HAL_Driver/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F3xx/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/sysmem.d" -MT"Src/sysmem.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/sysmem.o"
+arm-none-eabi-gcc "../Src/system_stm32f3xx.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32F303x8 -DDEBUG -c -I../Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32F3xx_HAL_Driver/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F3xx/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/system_stm32f3xx.d" -MT"Src/system_stm32f3xx.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/system_stm32f3xx.o"
+arm-none-eabi-gcc "../Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_ll_exti.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32F303x8 -DDEBUG -c -I../Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32F3xx_HAL_Driver/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F3xx/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_ll_exti.d" -MT"Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_ll_exti.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_ll_exti.o"
+arm-none-eabi-gcc "../Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_ll_gpio.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32F303x8 -DDEBUG -c -I../Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32F3xx_HAL_Driver/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F3xx/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_ll_gpio.d" -MT"Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_ll_gpio.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_ll_gpio.o"
+arm-none-eabi-gcc "../Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_ll_rcc.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32F303x8 -DDEBUG -c -I../Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32F3xx_HAL_Driver/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F3xx/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_ll_rcc.d" -MT"Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_ll_rcc.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_ll_rcc.o"
+arm-none-eabi-gcc "../Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_ll_utils.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32F303x8 -DDEBUG -c -I../Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32F3xx_HAL_Driver/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F3xx/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_ll_utils.d" -MT"Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_ll_utils.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_ll_utils.o"
+arm-none-eabi-gcc -o "vrs_cvicenie_1_edo.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/laptop/school/VRS/vrs_cvicenie_1_edo/STM32F303K8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="vrs_cvicenie_1_edo.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: vrs_cvicenie_1_edo.elf
+ 
+arm-none-eabi-size   vrs_cvicenie_1_edo.elf 
+arm-none-eabi-objdump -h -S  vrs_cvicenie_1_edo.elf  > "vrs_cvicenie_1_edo.list"
+   text	   data	    bss	    dec	    hex	filename
+   1312	      8	   1568	   2888	    b48	vrs_cvicenie_1_edo.elf
+Finished building: default.size.stdout
+ 
+Finished building: vrs_cvicenie_1_edo.list
+ 
+17:01:38 **** Build of configuration Debug for project vrs_cvicenie_1 ****
+make -j12 all 
+arm-none-eabi-gcc -mcpu=cortex-m4 -g3 -c -I../ -x assembler-with-cpp -MMD -MP -MF"Startup/startup_stm32f303k8tx.d" -MT"Startup/startup_stm32f303k8tx.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Startup/startup_stm32f303k8tx.o" "../Startup/startup_stm32f303k8tx.s"
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32F303x8 -DDEBUG -c -I../Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32F3xx_HAL_Driver/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F3xx/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc "../Src/stm32f3xx_it.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32F303x8 -DDEBUG -c -I../Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32F3xx_HAL_Driver/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F3xx/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/stm32f3xx_it.d" -MT"Src/stm32f3xx_it.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/stm32f3xx_it.o"
+arm-none-eabi-gcc "../Src/syscalls.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32F303x8 -DDEBUG -c -I../Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32F3xx_HAL_Driver/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F3xx/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/syscalls.d" -MT"Src/syscalls.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/syscalls.o"
+arm-none-eabi-gcc "../Src/sysmem.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32F303x8 -DDEBUG -c -I../Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32F3xx_HAL_Driver/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F3xx/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/sysmem.d" -MT"Src/sysmem.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/sysmem.o"
+arm-none-eabi-gcc "../Src/system_stm32f3xx.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32F303x8 -DDEBUG -c -I../Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32F3xx_HAL_Driver/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F3xx/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/system_stm32f3xx.d" -MT"Src/system_stm32f3xx.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/system_stm32f3xx.o"
+arm-none-eabi-gcc "../Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_ll_exti.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32F303x8 -DDEBUG -c -I../Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32F3xx_HAL_Driver/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F3xx/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_ll_exti.d" -MT"Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_ll_exti.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_ll_exti.o"
+arm-none-eabi-gcc "../Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_ll_gpio.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32F303x8 -DDEBUG -c -I../Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32F3xx_HAL_Driver/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F3xx/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_ll_gpio.d" -MT"Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_ll_gpio.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_ll_gpio.o"
+arm-none-eabi-gcc "../Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_ll_rcc.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32F303x8 -DDEBUG -c -I../Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32F3xx_HAL_Driver/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F3xx/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_ll_rcc.d" -MT"Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_ll_rcc.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_ll_rcc.o"
+arm-none-eabi-gcc "../Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_ll_utils.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32F303x8 -DDEBUG -c -I../Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32F3xx_HAL_Driver/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F3xx/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_ll_utils.d" -MT"Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_ll_utils.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_ll_utils.o"
+arm-none-eabi-gcc -o "vrs_cvicenie_1.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/laptop/school/VRS/vrs_cvicenie_1/STM32F303K8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="vrs_cvicenie_1.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: vrs_cvicenie_1.elf
+ 
+arm-none-eabi-size   vrs_cvicenie_1.elf 
+arm-none-eabi-objdump -h -S  vrs_cvicenie_1.elf  > "vrs_cvicenie_1.list"
+   text	   data	    bss	    dec	    hex	filename
+   1520	     16	   1576	   3112	    c28	vrs_cvicenie_1.elf
+Finished building: default.size.stdout
+ 
+Finished building: vrs_cvicenie_1.list
+ 
+17:02:55 **** Build of configuration Debug for project vrs_cv2_ll_programming ****
+make -j12 all 
+arm-none-eabi-gcc -mcpu=cortex-m4 -g3 -c -I../ -x assembler-with-cpp -MMD -MP -MF"Startup/startup_stm32f303k8tx.d" -MT"Startup/startup_stm32f303k8tx.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Startup/startup_stm32f303k8tx.o" "../Startup/startup_stm32f303k8tx.s"
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32F303x8 -DDEBUG -c -I../Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32F3xx_HAL_Driver/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F3xx/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc "../Src/stm32f3xx_it.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32F303x8 -DDEBUG -c -I../Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32F3xx_HAL_Driver/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F3xx/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/stm32f3xx_it.d" -MT"Src/stm32f3xx_it.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/stm32f3xx_it.o"
+arm-none-eabi-gcc "../Src/syscalls.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32F303x8 -DDEBUG -c -I../Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32F3xx_HAL_Driver/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F3xx/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/syscalls.d" -MT"Src/syscalls.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/syscalls.o"
+arm-none-eabi-gcc "../Src/sysmem.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32F303x8 -DDEBUG -c -I../Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32F3xx_HAL_Driver/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F3xx/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/sysmem.d" -MT"Src/sysmem.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/sysmem.o"
+arm-none-eabi-gcc "../Src/system_stm32f3xx.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32F303x8 -DDEBUG -c -I../Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32F3xx_HAL_Driver/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F3xx/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/system_stm32f3xx.d" -MT"Src/system_stm32f3xx.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/system_stm32f3xx.o"
+arm-none-eabi-gcc "../Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_ll_exti.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32F303x8 -DDEBUG -c -I../Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32F3xx_HAL_Driver/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F3xx/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_ll_exti.d" -MT"Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_ll_exti.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_ll_exti.o"
+arm-none-eabi-gcc "../Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_ll_gpio.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32F303x8 -DDEBUG -c -I../Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32F3xx_HAL_Driver/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F3xx/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_ll_gpio.d" -MT"Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_ll_gpio.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_ll_gpio.o"
+arm-none-eabi-gcc "../Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_ll_rcc.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32F303x8 -DDEBUG -c -I../Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32F3xx_HAL_Driver/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F3xx/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_ll_rcc.d" -MT"Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_ll_rcc.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_ll_rcc.o"
+arm-none-eabi-gcc "../Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_ll_utils.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32F303x8 -DDEBUG -c -I../Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32F3xx_HAL_Driver/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F3xx/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_ll_utils.d" -MT"Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_ll_utils.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_ll_utils.o"
+arm-none-eabi-gcc -o "vrs_cv2_ll_programming.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/laptop/vrs_cvicenie_1/STM32F303K8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="vrs_cv2_ll_programming.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: vrs_cv2_ll_programming.elf
+ 
+arm-none-eabi-size   vrs_cv2_ll_programming.elf 
+arm-none-eabi-objdump -h -S  vrs_cv2_ll_programming.elf  > "vrs_cv2_ll_programming.list"
+   text	   data	    bss	    dec	    hex	filename
+   1168	      8	   1568	   2744	    ab8	vrs_cv2_ll_programming.elf
+Finished building: default.size.stdout
+ 
+Finished building: vrs_cv2_ll_programming.list
+ 
+17:05:41 **** Build of configuration Debug for project vrs_cv2_ll_programming ****
+make -j12 all 
+arm-none-eabi-gcc -mcpu=cortex-m4 -g3 -c -I../ -x assembler-with-cpp -MMD -MP -MF"Startup/startup_stm32f303k8tx.d" -MT"Startup/startup_stm32f303k8tx.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Startup/startup_stm32f303k8tx.o" "../Startup/startup_stm32f303k8tx.s"
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32F303x8 -DDEBUG -c -I../Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32F3xx_HAL_Driver/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F3xx/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc "../Src/stm32f3xx_it.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32F303x8 -DDEBUG -c -I../Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32F3xx_HAL_Driver/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F3xx/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/stm32f3xx_it.d" -MT"Src/stm32f3xx_it.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/stm32f3xx_it.o"
+arm-none-eabi-gcc "../Src/syscalls.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32F303x8 -DDEBUG -c -I../Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32F3xx_HAL_Driver/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F3xx/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/syscalls.d" -MT"Src/syscalls.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/syscalls.o"
+arm-none-eabi-gcc "../Src/sysmem.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32F303x8 -DDEBUG -c -I../Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32F3xx_HAL_Driver/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F3xx/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/sysmem.d" -MT"Src/sysmem.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/sysmem.o"
+arm-none-eabi-gcc "../Src/system_stm32f3xx.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32F303x8 -DDEBUG -c -I../Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32F3xx_HAL_Driver/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F3xx/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/system_stm32f3xx.d" -MT"Src/system_stm32f3xx.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/system_stm32f3xx.o"
+arm-none-eabi-gcc "../Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_ll_exti.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32F303x8 -DDEBUG -c -I../Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32F3xx_HAL_Driver/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F3xx/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_ll_exti.d" -MT"Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_ll_exti.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_ll_exti.o"
+arm-none-eabi-gcc "../Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_ll_gpio.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32F303x8 -DDEBUG -c -I../Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32F3xx_HAL_Driver/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F3xx/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_ll_gpio.d" -MT"Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_ll_gpio.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_ll_gpio.o"
+arm-none-eabi-gcc "../Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_ll_rcc.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32F303x8 -DDEBUG -c -I../Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32F3xx_HAL_Driver/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F3xx/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_ll_rcc.d" -MT"Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_ll_rcc.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_ll_rcc.o"
+arm-none-eabi-gcc "../Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_ll_utils.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32F303x8 -DDEBUG -c -I../Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32F3xx_HAL_Driver/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F3xx/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_ll_utils.d" -MT"Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_ll_utils.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_ll_utils.o"
+arm-none-eabi-gcc -o "vrs_cv2_ll_programming.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/laptop/vrs_cvicenie_1/STM32F303K8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="vrs_cv2_ll_programming.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: vrs_cv2_ll_programming.elf
+ 
+arm-none-eabi-size   vrs_cv2_ll_programming.elf 
+arm-none-eabi-objdump -h -S  vrs_cv2_ll_programming.elf  > "vrs_cv2_ll_programming.list"
+   text	   data	    bss	    dec	    hex	filename
+   1520	     16	   1576	   3112	    c28	vrs_cv2_ll_programming.elf
+Finished building: default.size.stdout
+ 
+Finished building: vrs_cv2_ll_programming.list
+ 
+17:06:11 **** Incremental Build of configuration Debug for project vrs_cv2_ll_programming ****
 make -j12 all 
 arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32F303x8 -DDEBUG -c -I../Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32F3xx_HAL_Driver/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F3xx/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
-In file included from ../Src/main.c:23:
-../Inc/assignment.h:49:1: error: unknown type name 'EDGE_TYPE'
-   49 | EDGE_TYPE edgeDetect(uint8_t pin_state, uint8_t samples);
-      | ^~~~~~~~~
-../Src/main.c: In function 'main':
-../Src/main.c:76:3: error: unknown type name 'EDGE_TYPE'; use 'enum' keyword to refer to the type
-   76 |   EDGE_TYPE edge;
-      |   ^~~~~~~~~
-      |   enum 
-../Src/main.c:81:24: warning: self-comparison always evaluates to false [-Wtautological-compare]
-   81 |                   edge != edge;
-      |                        ^~
-../Src/main.c:81:19: warning: statement with no effect [-Wunused-value]
-   81 |                   edge != edge;
-      |                   ^~~~
-../Src/main.c: At top level:
-../Src/main.c:91:1: error: unknown type name 'EDGE_TYPE'; use 'enum' keyword to refer to the type
-   91 | EDGE_TYPE edgeDetect(uint8_t pin_state, uint8_t samples){
-      | ^~~~~~~~~
-      | enum 
 ../Src/main.c: In function 'edgeDetect':
-../Src/main.c:94:21: error: unknown type name 'size_t'
-   94 |                 for(size_t i = 0; i < samples; i++){
-      |                     ^~~~~~
-../Src/main.c:25:1: note: 'size_t' is defined in header '<stddef.h>'; did you forget to '#include <stddef.h>'?
-   24 | #include "stdbool.h"
-  +++ |+#include <stddef.h>
-   25 | 
-../Src/main.c:104:21: error: unknown type name 'size_t'
-  104 |                 for(size_t i = 0; i < samples; i++){
-      |                     ^~~~~~
-../Src/main.c:104:21: note: 'size_t' is defined in header '<stddef.h>'; did you forget to '#include <stddef.h>'?
-../Src/main.c:114:1: warning: control reaches end of non-void function [-Wreturn-type]
-  114 | }
-      | ^
+../Src/main.c:28:17: error: 'countZero' undeclared (first use in this function)
+   28 |                 countZero=0;
+      |                 ^~~~~~~~~
+../Src/main.c:28:17: note: each undeclared identifier is reported only once for each function it appears in
+../Src/main.c:29:17: error: 'countOne' undeclared (first use in this function)
+   29 |                 countOne++;
+      |                 ^~~~~~~~
+../Src/main.c:30:43: error: 'HIGH' undeclared (first use in this function)
+   30 |                 if (countOne>=samples && !HIGH){
+      |                                           ^~~~
+../Src/main.c:32:32: error: 'true' undeclared (first use in this function)
+   32 |                         HIGH = true;
+      |                                ^~~~
+../Src/main.c:24:1: note: 'true' is defined in header '<stdbool.h>'; did you forget to '#include <stdbool.h>'?
+   23 | #include "assignment.h"
+  +++ |+#include <stdbool.h>
+   24 | 
+../Src/main.c:44:30: error: 'false' undeclared (first use in this function)
+   44 |                         HIGH=false;
+      |                              ^~~~~
+../Src/main.c:44:30: note: 'false' is defined in header '<stdbool.h>'; did you forget to '#include <stdbool.h>'?
+../Src/main.c: In function 'main':
+../Src/main.c:108:9: error: 'state' undeclared (first use in this function)
+  108 |         state=edgeDetect(BUTTON_GET_STATE,5);
+      |         ^~~~~
+../Src/main.c:109:29: error: 'ledState' undeclared (first use in this function)
+  109 |         if (state==FALL && !ledState){
+      |                             ^~~~~~~~
+../Src/main.c:111:26: error: 'true' undeclared (first use in this function)
+  111 |                 ledState=true;
+      |                          ^~~~
+../Src/main.c:111:26: note: 'true' is defined in header '<stdbool.h>'; did you forget to '#include <stdbool.h>'?
+../Src/main.c:115:26: error: 'false' undeclared (first use in this function)
+  115 |                 ledState=false;
+      |                          ^~~~~
+../Src/main.c:115:26: note: 'false' is defined in header '<stdbool.h>'; did you forget to '#include <stdbool.h>'?
 make: *** [Src/subdir.mk:31: Src/main.o] Error 1
 "make -j12 all" terminated with exit code 2. Build might be incomplete.
-16:09:03 **** Incremental Build of configuration Debug for project vrs_cvicenie_1 ****
+17:06:27 **** Incremental Build of configuration Debug for project vrs_cv2_ll_programming ****
 make -j12 all 
 arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32F303x8 -DDEBUG -c -I../Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32F3xx_HAL_Driver/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F3xx/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
-In file included from ../Src/main.c:23:
-../Inc/assignment.h:49:1: error: unknown type name 'EDGE_TYPE'
-   49 | EDGE_TYPE edgeDetect(uint8_t pin_state, uint8_t samples);
-      | ^~~~~~~~~
+arm-none-eabi-gcc -o "vrs_cv2_ll_programming.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/laptop/vrs_cvicenie_1/STM32F303K8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="vrs_cv2_ll_programming.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: vrs_cv2_ll_programming.elf
+ 
+arm-none-eabi-size   vrs_cv2_ll_programming.elf 
+arm-none-eabi-objdump -h -S  vrs_cv2_ll_programming.elf  > "vrs_cv2_ll_programming.list"
+   text	   data	    bss	    dec	    hex	filename
+   1228	     12	   1564	   2804	    af4	vrs_cv2_ll_programming.elf
+Finished building: default.size.stdout
+ 
+Finished building: vrs_cv2_ll_programming.list
+ 
+17:07:19 **** Incremental Build of configuration Debug for project vrs_cv2_ll_programming ****
+make -j12 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32F303x8 -DDEBUG -c -I../Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32F3xx_HAL_Driver/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F3xx/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "vrs_cv2_ll_programming.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/laptop/vrs_cvicenie_1/STM32F303K8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="vrs_cv2_ll_programming.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: vrs_cv2_ll_programming.elf
+ 
+arm-none-eabi-size   vrs_cv2_ll_programming.elf 
+arm-none-eabi-objdump -h -S  vrs_cv2_ll_programming.elf  > "vrs_cv2_ll_programming.list"
+   text	   data	    bss	    dec	    hex	filename
+   1520	     16	   1576	   3112	    c28	vrs_cv2_ll_programming.elf
+Finished building: default.size.stdout
+ 
+Finished building: vrs_cv2_ll_programming.list
+ 
+17:08:34 **** Incremental Build of configuration Debug for project vrs_cv2_ll_programming ****
+make -j12 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32F303x8 -DDEBUG -c -I../Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32F3xx_HAL_Driver/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F3xx/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
 ../Src/main.c: In function 'main':
-../Src/main.c:76:3: error: unknown type name 'EDGE_TYPE'; use 'enum' keyword to refer to the type
-   76 |   EDGE_TYPE edge;
-      |   ^~~~~~~~~
-      |   enum 
-../Src/main.c:81:24: warning: self-comparison always evaluates to false [-Wtautological-compare]
-   81 |                   edge != edge;
-      |                        ^~
-../Src/main.c:81:19: warning: statement with no effect [-Wunused-value]
-   81 |                   edge != edge;
-      |                   ^~~~
+../Src/main.c:76:7: error: unknown type name 'EDGE_TYPE'; use 'enum' keyword to refer to the type
+   76 |       EDGE_TYPE edge;
+      |       ^~~~~~~~~
+      |       enum 
 ../Src/main.c: At top level:
-../Src/main.c:91:1: error: unknown type name 'EDGE_TYPE'; use 'enum' keyword to refer to the type
-   91 | EDGE_TYPE edgeDetect(uint8_t pin_state, uint8_t samples){
+../Src/main.c:94:1: error: unknown type name 'EDGE_TYPE'; use 'enum' keyword to refer to the type
+   94 | EDGE_TYPE edgeDetect(uint8_t pin_state, uint8_t samples){
       | ^~~~~~~~~
       | enum 
-../Src/main.c: In function 'edgeDetect':
-../Src/main.c:114:1: warning: control reaches end of non-void function [-Wreturn-type]
-  114 | }
-      | ^
+../Src/main.c:94:11: error: conflicting types for 'edgeDetect'; have 'int(uint8_t,  uint8_t)' {aka 'int(unsigned char,  unsigned char)'}
+   94 | EDGE_TYPE edgeDetect(uint8_t pin_state, uint8_t samples){
+      |           ^~~~~~~~~~
+In file included from ../Src/main.c:23:
+../Inc/assignment.h:44:16: note: previous declaration of 'edgeDetect' with type 'enum EDGE_TYPE(uint8_t,  uint8_t)' {aka 'enum EDGE_TYPE(unsigned char,  unsigned char)'}
+   44 | enum EDGE_TYPE edgeDetect(uint8_t pin_state, uint8_t samples);
+      |                ^~~~~~~~~~
 make: *** [Src/subdir.mk:31: Src/main.o] Error 1
 "make -j12 all" terminated with exit code 2. Build might be incomplete.
-16:09:41 **** Incremental Build of configuration Debug for project vrs_cvicenie_1 ****
+17:09:13 **** Incremental Build of configuration Debug for project vrs_cv2_ll_programming ****
 make -j12 all 
 arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32F303x8 -DDEBUG -c -I../Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32F3xx_HAL_Driver/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F3xx/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
-../Src/main.c: In function 'main':
-../Src/main.c:81:24: warning: self-comparison always evaluates to false [-Wtautological-compare]
-   81 |                   edge != edge;
-      |                        ^~
-../Src/main.c:81:19: warning: statement with no effect [-Wunused-value]
-   81 |                   edge != edge;
-      |                   ^~~~
-../Src/main.c: In function 'edgeDetect':
-../Src/main.c:114:1: warning: control reaches end of non-void function [-Wreturn-type]
-  114 | }
-      | ^
-arm-none-eabi-gcc -o "vrs_cvicenie_1.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/laptop/school/VRS/vrs_cvicenie_1/STM32F303K8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="vrs_cvicenie_1.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: vrs_cvicenie_1.elf
+arm-none-eabi-gcc -o "vrs_cv2_ll_programming.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/laptop/vrs_cvicenie_1/STM32F303K8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="vrs_cv2_ll_programming.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: vrs_cv2_ll_programming.elf
  
-arm-none-eabi-size   vrs_cvicenie_1.elf 
-arm-none-eabi-objdump -h -S  vrs_cvicenie_1.elf  > "vrs_cvicenie_1.list"
+arm-none-eabi-size   vrs_cv2_ll_programming.elf 
+arm-none-eabi-objdump -h -S  vrs_cv2_ll_programming.elf  > "vrs_cv2_ll_programming.list"
    text	   data	    bss	    dec	    hex	filename
-   1256	      8	   1568	   2832	    b10	vrs_cvicenie_1.elf
+   1512	     12	   1564	   3088	    c10	vrs_cv2_ll_programming.elf
 Finished building: default.size.stdout
  
-Finished building: vrs_cvicenie_1.list
+Finished building: vrs_cv2_ll_programming.list
  
-16:10:13 **** Incremental Build of configuration Debug for project vrs_cvicenie_1 ****
+17:09:38 **** Incremental Build of configuration Debug for project vrs_cv2_ll_programming ****
 make -j12 all 
 arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32F303x8 -DDEBUG -c -I../Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32F3xx_HAL_Driver/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F3xx/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
-../Src/main.c: In function 'edgeDetect':
-../Src/main.c:114:1: warning: control reaches end of non-void function [-Wreturn-type]
-  114 | }
-      | ^
-arm-none-eabi-gcc -o "vrs_cvicenie_1.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/laptop/school/VRS/vrs_cvicenie_1/STM32F303K8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="vrs_cvicenie_1.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: vrs_cvicenie_1.elf
+arm-none-eabi-gcc -o "vrs_cv2_ll_programming.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/laptop/vrs_cvicenie_1/STM32F303K8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="vrs_cv2_ll_programming.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: vrs_cv2_ll_programming.elf
  
-arm-none-eabi-size   vrs_cvicenie_1.elf 
-arm-none-eabi-objdump -h -S  vrs_cvicenie_1.elf  > "vrs_cvicenie_1.list"
+arm-none-eabi-size   vrs_cv2_ll_programming.elf 
+arm-none-eabi-objdump -h -S  vrs_cv2_ll_programming.elf  > "vrs_cv2_ll_programming.list"
    text	   data	    bss	    dec	    hex	filename
-   1276	      8	   1568	   2852	    b24	vrs_cvicenie_1.elf
+   1240	     12	   1564	   2816	    b00	vrs_cv2_ll_programming.elf
 Finished building: default.size.stdout
  
-Finished building: vrs_cvicenie_1.list
+Finished building: vrs_cv2_ll_programming.list
  
-16:10:38 **** Incremental Build of configuration Debug for project vrs_cvicenie_1 ****
+17:09:57 **** Incremental Build of configuration Debug for project vrs_cv2_ll_programming ****
 make -j12 all 
 arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32F303x8 -DDEBUG -c -I../Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32F3xx_HAL_Driver/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F3xx/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
-../Src/main.c: In function 'edgeDetect':
-../Src/main.c:114:1: warning: control reaches end of non-void function [-Wreturn-type]
-  114 | }
-      | ^
-arm-none-eabi-gcc -o "vrs_cvicenie_1.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/laptop/school/VRS/vrs_cvicenie_1/STM32F303K8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="vrs_cvicenie_1.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: vrs_cvicenie_1.elf
+arm-none-eabi-gcc -o "vrs_cv2_ll_programming.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/laptop/vrs_cvicenie_1/STM32F303K8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="vrs_cv2_ll_programming.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: vrs_cv2_ll_programming.elf
  
-arm-none-eabi-size   vrs_cvicenie_1.elf 
-arm-none-eabi-objdump -h -S  vrs_cvicenie_1.elf  > "vrs_cvicenie_1.list"
+arm-none-eabi-size   vrs_cv2_ll_programming.elf 
+arm-none-eabi-objdump -h -S  vrs_cv2_ll_programming.elf  > "vrs_cv2_ll_programming.list"
    text	   data	    bss	    dec	    hex	filename
-   1288	      8	   1568	   2864	    b30	vrs_cvicenie_1.elf
+   1512	     12	   1564	   3088	    c10	vrs_cv2_ll_programming.elf
 Finished building: default.size.stdout
  
-Finished building: vrs_cvicenie_1.list
+Finished building: vrs_cv2_ll_programming.list
  
-16:10:52 **** Incremental Build of configuration Debug for project vrs_cvicenie_1 ****
+17:17:30 **** Incremental Build of configuration Debug for project vrs_cv2_ll_programming ****
 make -j12 all 
 arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32F303x8 -DDEBUG -c -I../Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32F3xx_HAL_Driver/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F3xx/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
-../Src/main.c: In function 'edgeDetect':
-../Src/main.c:114:1: warning: control reaches end of non-void function [-Wreturn-type]
-  114 | }
-      | ^
-arm-none-eabi-gcc -o "vrs_cvicenie_1.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/laptop/school/VRS/vrs_cvicenie_1/STM32F303K8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="vrs_cvicenie_1.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: vrs_cvicenie_1.elf
+arm-none-eabi-gcc -o "vrs_cv2_ll_programming.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/laptop/vrs_cvicenie_1/STM32F303K8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="vrs_cv2_ll_programming.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: vrs_cv2_ll_programming.elf
  
-arm-none-eabi-size   vrs_cvicenie_1.elf 
-arm-none-eabi-objdump -h -S  vrs_cvicenie_1.elf  > "vrs_cvicenie_1.list"
+arm-none-eabi-size   vrs_cv2_ll_programming.elf 
+arm-none-eabi-objdump -h -S  vrs_cv2_ll_programming.elf  > "vrs_cv2_ll_programming.list"
    text	   data	    bss	    dec	    hex	filename
-   1288	      8	   1568	   2864	    b30	vrs_cvicenie_1.elf
+   1364	     12	   1564	   2940	    b7c	vrs_cv2_ll_programming.elf
 Finished building: default.size.stdout
  
-Finished building: vrs_cvicenie_1.list
+Finished building: vrs_cv2_ll_programming.list
  
-16:11:20 **** Incremental Build of configuration Debug for project vrs_cvicenie_1 ****
+17:17:56 **** Incremental Build of configuration Debug for project vrs_cv2_ll_programming ****
 make -j12 all 
 arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32F303x8 -DDEBUG -c -I../Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32F3xx_HAL_Driver/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F3xx/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
-arm-none-eabi-gcc -o "vrs_cvicenie_1.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/laptop/school/VRS/vrs_cvicenie_1/STM32F303K8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="vrs_cvicenie_1.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: vrs_cvicenie_1.elf
+arm-none-eabi-gcc -o "vrs_cv2_ll_programming.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/laptop/vrs_cvicenie_1/STM32F303K8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="vrs_cv2_ll_programming.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: vrs_cv2_ll_programming.elf
  
-arm-none-eabi-size   vrs_cvicenie_1.elf 
-arm-none-eabi-objdump -h -S  vrs_cvicenie_1.elf  > "vrs_cvicenie_1.list"
+arm-none-eabi-size   vrs_cv2_ll_programming.elf 
+arm-none-eabi-objdump -h -S  vrs_cv2_ll_programming.elf  > "vrs_cv2_ll_programming.list"
    text	   data	    bss	    dec	    hex	filename
-   1292	      8	   1568	   2868	    b34	vrs_cvicenie_1.elf
+   1364	     12	   1564	   2940	    b7c	vrs_cv2_ll_programming.elf
 Finished building: default.size.stdout
  
-Finished building: vrs_cvicenie_1.list
+Finished building: vrs_cv2_ll_programming.list
  
-16:13:57 **** Incremental Build of configuration Debug for project vrs_cvicenie_1 ****
+17:18:05 **** Incremental Build of configuration Debug for project vrs_cv2_ll_programming ****
 make -j12 all 
 arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32F303x8 -DDEBUG -c -I../Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32F3xx_HAL_Driver/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F3xx/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
-../Src/main.c: In function 'main':
-../Src/main.c:77:8: warning: variable 'prev_value' set but not used [-Wunused-but-set-variable]
-   77 |   bool prev_value = 1;
-      |        ^~~~~~~~~~
+arm-none-eabi-gcc -o "vrs_cv2_ll_programming.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/laptop/vrs_cvicenie_1/STM32F303K8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="vrs_cv2_ll_programming.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: vrs_cv2_ll_programming.elf
+ 
+arm-none-eabi-size   vrs_cv2_ll_programming.elf 
+arm-none-eabi-objdump -h -S  vrs_cv2_ll_programming.elf  > "vrs_cv2_ll_programming.list"
+   text	   data	    bss	    dec	    hex	filename
+   1364	     12	   1564	   2940	    b7c	vrs_cv2_ll_programming.elf
+Finished building: default.size.stdout
+ 
+Finished building: vrs_cv2_ll_programming.list
+ 
+17:23:07 **** Incremental Build of configuration Debug for project vrs_cv2_ll_programming ****
+make -j12 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32F303x8 -DDEBUG -c -I../Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32F3xx_HAL_Driver/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F3xx/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "vrs_cv2_ll_programming.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/laptop/vrs_cvicenie_1/STM32F303K8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="vrs_cv2_ll_programming.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: vrs_cv2_ll_programming.elf
+ 
+arm-none-eabi-size   vrs_cv2_ll_programming.elf 
+arm-none-eabi-objdump -h -S  vrs_cv2_ll_programming.elf  > "vrs_cv2_ll_programming.list"
+   text	   data	    bss	    dec	    hex	filename
+   1512	     12	   1564	   3088	    c10	vrs_cv2_ll_programming.elf
+Finished building: default.size.stdout
+ 
+Finished building: vrs_cv2_ll_programming.list
+ 
+17:23:10 **** Incremental Build of configuration Debug for project vrs_cv2_ll_programming ****
+make -j12 all 
+arm-none-eabi-size   vrs_cv2_ll_programming.elf 
+   text	   data	    bss	    dec	    hex	filename
+   1512	     12	   1564	   3088	    c10	vrs_cv2_ll_programming.elf
+Finished building: default.size.stdout
+ 
+17:23:40 **** Incremental Build of configuration Debug for project vrs_cv2_ll_programming ****
+make -j12 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32F303x8 -DDEBUG -c -I../Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32F3xx_HAL_Driver/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F3xx/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "vrs_cv2_ll_programming.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/laptop/vrs_cvicenie_1/STM32F303K8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="vrs_cv2_ll_programming.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: vrs_cv2_ll_programming.elf
+ 
+arm-none-eabi-size   vrs_cv2_ll_programming.elf 
+arm-none-eabi-objdump -h -S  vrs_cv2_ll_programming.elf  > "vrs_cv2_ll_programming.list"
+   text	   data	    bss	    dec	    hex	filename
+   1512	     12	   1564	   3088	    c10	vrs_cv2_ll_programming.elf
+Finished building: default.size.stdout
+ 
+Finished building: vrs_cv2_ll_programming.list
+ 
+17:23:42 **** Incremental Build of configuration Debug for project vrs_cv2_ll_programming ****
+make -j12 all 
+arm-none-eabi-size   vrs_cv2_ll_programming.elf 
+   text	   data	    bss	    dec	    hex	filename
+   1512	     12	   1564	   3088	    c10	vrs_cv2_ll_programming.elf
+Finished building: default.size.stdout
+ 
+17:29:33 **** Incremental Build of configuration Debug for project vrs_cv2_ll_programming ****
+make -j12 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DSTM32F303x8 -DDEBUG -c -I../Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32F3xx_HAL_Driver/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F3xx/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "vrs_cv2_ll_programming.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/laptop/vrs_cvicenie_1/STM32F303K8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="vrs_cv2_ll_programming.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: vrs_cv2_ll_programming.elf
+ 
+arm-none-eabi-size   vrs_cv2_ll_programming.elf 
+arm-none-eabi-objdump -h -S  vrs_cv2_ll_programming.elf  > "vrs_cv2_ll_programming.list"
+   text	   data	    bss	    dec	    hex	filename
+   1520	     12	   1564	   3096	    c18	vrs_cv2_ll_programming.elf
+Finished building: default.size.stdout
+ 
+Finished building: vrs_cv2_ll_programming.list
+ 
+17:29:38 **** Incremental Build of configuration Debug for project vrs_cv2_ll_programming ****
+make -j12 all 
+arm-none-eabi-size   vrs_cv2_ll_programming.elf 
+   text	   data	    bss	    dec	    hex	filename
+   1520	     12	   1564	   3096	    c18	vrs_cv2_ll_programming.elf
+Finished building: default.size.stdout
+ 
+17:50:55 **** Build of configuration Debug for project vrs_cvicenie_1 ****
+make -j12 all 
 arm-none-eabi-gcc -o "vrs_cvicenie_1.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/laptop/school/VRS/vrs_cvicenie_1/STM32F303K8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="vrs_cvicenie_1.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 Finished building target: vrs_cvicenie_1.elf
  
 arm-none-eabi-size   vrs_cvicenie_1.elf 
 arm-none-eabi-objdump -h -S  vrs_cvicenie_1.elf  > "vrs_cvicenie_1.list"
    text	   data	    bss	    dec	    hex	filename
-   1312	      8	   1568	   2888	    b48	vrs_cvicenie_1.elf
+   1520	     12	   1564	   3096	    c18	vrs_cvicenie_1.elf
 Finished building: default.size.stdout
  
 Finished building: vrs_cvicenie_1.list

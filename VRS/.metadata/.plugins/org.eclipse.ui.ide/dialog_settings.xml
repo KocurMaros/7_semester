@@ -8,6 +8,8 @@
 		<item key="WizardProjectsImportPage.STORE_HIDE_CONFLICTING_PROJECTS_ID" value="false"/>
 		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
 			<item value="/home/laptop/school/VRS/vrs_cvicenie_1"/>
+			<item value="/home/laptop/vrs_cvicenie_1"/>
+			<item value="/home/laptop/school/VRS/vrs_cvicenie_1_edo"/>
 			<item value="/home/laptop/school/VRS/exams/vrs_cvicenie_1"/>
 		</list>
 		<list key="WizardProjectsImportPage.STORE_ARCHIVES">
