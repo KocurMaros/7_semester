@@ -1,7 +1,0 @@
-13:24:41 **** Build of configuration Default for project vrs_cvicenie_1-master ****
-make all 
-make: *** No rule to make target 'all'.  Stop.
-"make all" terminated with exit code 2. Build might be incomplete.
-
-13:24:41 Build Failed. 1 errors, 0 warnings. (took 125ms)
-

@@ -38,7 +38,7 @@ extern "C" {
 #include "stm32f3xx_ll_pwr.h"
 #include "stm32f3xx_ll_dma.h"
 #include "stm32f3xx_ll_gpio.h"
-
+#include <stdbool.h>
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 
@@ -79,7 +79,6 @@ void Error_Handler(void);
 #define VCP_RX_GPIO_Port GPIOA
 
 /* USER CODE BEGIN Private defines */
-
 /* USER CODE END Private defines */
 
 #ifdef __cplusplus

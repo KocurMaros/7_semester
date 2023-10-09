@@ -1,0 +1,10 @@
+20:14:02 **** Incremental Build of configuration Debug for project cvicenie_2 ****
+make -j12 all 
+arm-none-eabi-size   cvicenie_2.elf 
+   text	   data	    bss	    dec	    hex	filename
+   8108	     20	   1708	   9836	   266c	cvicenie_2.elf
+Finished building: default.size.stdout
+ 
+
+20:14:03 Build Finished. 0 errors, 0 warnings. (took 179ms)
+

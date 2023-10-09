@@ -6,8 +6,12 @@
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
-		<item key="selection" value=""/>
+		<item key="selection" value="CALLBACK"/>
 		<list key="findhistory">
+			<item value="callback"/>
+			<item value="detection"/>
+			<item value="switchState"/>
+			<item value="LED_ON"/>
 			<item value="*(volatile uint32_t *)"/>
 		</list>
 		<list key="replacehistory">

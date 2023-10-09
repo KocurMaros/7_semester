@@ -1,0 +1,10 @@
+08:46:36 **** Incremental Build of configuration Debug for project vrs_cvicenie_3 ****
+make -j12 all 
+arm-none-eabi-size   vrs_cvicenie_3.elf 
+   text	   data	    bss	    dec	    hex	filename
+   2332	     12	   1572	   3916	    f4c	vrs_cvicenie_3.elf
+Finished building: default.size.stdout
+ 
+
+08:46:36 Build Finished. 0 errors, 0 warnings. (took 123ms)
+
