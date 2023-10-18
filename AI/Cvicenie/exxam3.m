@@ -16,13 +16,13 @@ for i = 1:5
    prevodova(i) = out.y.Data(end);
 end
 i = 1;
-for u_i = 1:0.5:30
+for u_i = 1:0.5:33.5
    u = u_i;
    out = sim('exam3');
    prevodova(i) = out.y.Data(end);
    i = i + 1;
 end
-u_i = 1:0.5:30;
+u_i = 1:0.5:33.5;
 figure(2)
 plot(u_i,prevodova,"-o");
 xlabel("u");

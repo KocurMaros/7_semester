@@ -1,0 +1,48 @@
+clear
+clc
+sim_time = 20;
+sim_step = 1/200;
+
+lpop = 10;
+numgen=500;
+u = 30;
+lstring=3;
+pid_space = 2*u;
+
+Space=[ones(1,lstring)*(0); ones(1,lstring)*pid_space];
+Delta=Space(2,:)/100;   
+
+set_param('exam3','FastRestart','on')
+AP = 0;
+for i=1:3
+    Pop=genrpop(lpop,Space);
+    for gen=1:numgen
+        try
+            out=sim("exam3");
+            Fit = sum(abs(out.e));
+        catch
+            Fit = ones(1,u);
+        end
+        evolution(gen)=min(Fit);	% convergence graph of the solution
+
+        % GA
+        Best=selbest(Pop,Fit,[10,12]);
+        Old=selrand(Pop,Fit,4);
+        Work1 = seltourn(Pop,Fit,2);
+        Work2 = selsus(Pop,Fit,2);
+        Work1=crossov(Work1,1,0);
+        Work2=mutx(Work2,0.05,Space);
+        Work2=muta(Work2,0.08,Delta,Space);
+        Pop=[Best;Old;Work1;Work2];
+
+    end;  % gen
+    % Best solution
+    AP = AP + evolution;
+    figure(1);
+    plot(evolution);
+    title('Vysoky tlak nizka diverzifikacia');
+    xlabel('generation');
+    ylabel('fitness');
+    hold on 
+end
+plot (AP/3, 'r--', 'LineWidth',2);
