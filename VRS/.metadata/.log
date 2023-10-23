@@ -5897,3 +5897,755 @@ Command-line arguments:  -os linux -ws gtk -arch x86_64
 
 !ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2023-10-22 12:51:01.505
 !MESSAGE Started RMI Server, listening on port 41337
+!SESSION 2023-10-23 13:29:10.690 -----------------------------------------------
+eclipse.buildId=Version 1.13.2
+java.version=17.0.6
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Command-line arguments:  -os linux -ws gtk -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2023-10-23 13:29:13.865
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2023-10-23 13:29:13.866
+!MESSAGE Log4j2 initialized with config file /home/laptop/school/VRS/.metadata/.log4j2.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2023-10-23 13:29:17.020
+!MESSAGE Started RMI Server, listening on port 41337
+
+!ENTRY org.eclipse.core.resources 4 77 2023-10-23 13:33:34.951
+!MESSAGE Invalid project description.
+!SUBENTRY 1 unknown 0 0 2023-10-23 13:33:34.951
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2023-10-23 13:33:34.951
+!MESSAGE /home/laptop/school/VRS/vrs_cvicenie_4 overlaps the location of another project: 'vrs_cvicenie_4'
+
+!ENTRY com.st.stm32cube.common.projectcreation 4 0 2023-10-23 13:33:34.952
+!MESSAGE Project is null
+
+!ENTRY org.eclipse.core.resources 4 77 2023-10-23 13:33:37.116
+!MESSAGE Invalid project description.
+!SUBENTRY 1 unknown 0 0 2023-10-23 13:33:37.116
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2023-10-23 13:33:37.116
+!MESSAGE /home/laptop/school/VRS/vrs_cvicenie_4 overlaps the location of another project: 'vrs_cvicenie_4'
+
+!ENTRY com.st.stm32cube.common.projectcreation 4 0 2023-10-23 13:33:37.116
+!MESSAGE Project is null
+
+!ENTRY org.eclipse.core.resources 4 77 2023-10-23 13:33:37.167
+!MESSAGE Invalid project description.
+!SUBENTRY 1 unknown 0 0 2023-10-23 13:33:37.167
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2023-10-23 13:33:37.167
+!MESSAGE /home/laptop/school/VRS/vrs_cvicenie_4 overlaps the location of another project: 'vrs_cvicenie_4'
+
+!ENTRY com.st.stm32cube.common.projectcreation 4 0 2023-10-23 13:33:37.167
+!MESSAGE Project is null
+
+!ENTRY org.eclipse.core.resources 4 77 2023-10-23 13:33:47.888
+!MESSAGE Invalid project description.
+!SUBENTRY 1 unknown 0 0 2023-10-23 13:33:47.888
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2023-10-23 13:33:47.888
+!MESSAGE /home/laptop/school/VRS/vrs_cvicenie_4 overlaps the location of another project: 'vrs_cvicenie_4'
+
+!ENTRY com.st.stm32cube.common.projectcreation 4 0 2023-10-23 13:33:47.888
+!MESSAGE Project is null
+
+!ENTRY org.eclipse.cdt.core 1 0 2023-10-23 13:34:04.035
+!MESSAGE Indexed 'cv06' (13 sources, 96 headers) in 1.38 sec: 7,675 declarations; 22,267 references; 2 unresolved inclusions; 49 syntax errors; 188 unresolved names (0.62%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2023-10-23 13:36:32.642
+!MESSAGE Indexed 'cv07' (14 sources, 96 headers) in 0.765 sec: 8,535 declarations; 20,205 references; 0 unresolved inclusions; 154 syntax errors; 54 unresolved names (0.19%)
+
+!ENTRY org.eclipse.core.resources 4 77 2023-10-23 13:37:55.040
+!MESSAGE Invalid project description.
+!SUBENTRY 1 unknown 0 0 2023-10-23 13:37:55.040
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2023-10-23 13:37:55.040
+!MESSAGE /home/laptop/school/VRS/cv07 overlaps the location of another project: 'cv07'
+
+!ENTRY com.st.stm32cube.common.projectcreation 4 0 2023-10-23 13:37:55.040
+!MESSAGE Project is null
+
+!ENTRY com.st.stm32cube.ide.mcu.debug.launch 2 0 2023-10-23 13:37:55.534
+!MESSAGE Won't launch debug session since we failed to locate the binary.
+
+!ENTRY org.eclipse.core.resources 4 77 2023-10-23 13:38:17.895
+!MESSAGE Invalid project description.
+!SUBENTRY 1 unknown 0 0 2023-10-23 13:38:17.895
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2023-10-23 13:38:17.895
+!MESSAGE /home/laptop/school/VRS/cv07 overlaps the location of another project: 'cv07'
+
+!ENTRY com.st.stm32cube.common.projectcreation 4 0 2023-10-23 13:38:17.895
+!MESSAGE Project is null
+
+!ENTRY com.st.stm32cube.ide.mcu.debug.launch 2 0 2023-10-23 13:38:18.263
+!MESSAGE Won't launch debug session since we failed to locate the binary.
+
+!ENTRY org.eclipse.core.resources 4 77 2023-10-23 13:38:26.762
+!MESSAGE Invalid project description.
+!SUBENTRY 1 unknown 0 0 2023-10-23 13:38:26.762
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2023-10-23 13:38:26.762
+!MESSAGE /home/laptop/school/VRS/cv07 overlaps the location of another project: 'cv07'
+
+!ENTRY com.st.stm32cube.common.projectcreation 4 0 2023-10-23 13:38:26.762
+!MESSAGE Project is null
+
+!ENTRY org.eclipse.core.resources 4 77 2023-10-23 13:38:37.371
+!MESSAGE Invalid project description.
+!SUBENTRY 1 unknown 0 0 2023-10-23 13:38:37.371
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2023-10-23 13:38:37.371
+!MESSAGE /home/laptop/school/VRS/cv07 overlaps the location of another project: 'cv07'
+
+!ENTRY com.st.stm32cube.common.projectcreation 4 0 2023-10-23 13:38:37.372
+!MESSAGE Project is null
+
+!ENTRY org.eclipse.core.resources 4 77 2023-10-23 13:38:37.403
+!MESSAGE Invalid project description.
+!SUBENTRY 1 unknown 0 0 2023-10-23 13:38:37.403
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2023-10-23 13:38:37.403
+!MESSAGE /home/laptop/school/VRS/cv07 overlaps the location of another project: 'cv07'
+
+!ENTRY com.st.stm32cube.common.projectcreation 4 0 2023-10-23 13:38:37.403
+!MESSAGE Project is null
+
+!ENTRY org.eclipse.core.resources 4 77 2023-10-23 13:45:03.188
+!MESSAGE Invalid project description.
+!SUBENTRY 1 unknown 0 0 2023-10-23 13:45:03.188
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2023-10-23 13:45:03.188
+!MESSAGE /home/laptop/school/VRS/cv07 overlaps the location of another project: 'cv07'
+
+!ENTRY com.st.stm32cube.common.projectcreation 4 0 2023-10-23 13:45:03.188
+!MESSAGE Project is null
+
+!ENTRY org.eclipse.core.resources 4 77 2023-10-23 13:45:03.225
+!MESSAGE Invalid project description.
+!SUBENTRY 1 unknown 0 0 2023-10-23 13:45:03.225
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2023-10-23 13:45:03.225
+!MESSAGE /home/laptop/school/VRS/cv07 overlaps the location of another project: 'cv07'
+
+!ENTRY com.st.stm32cube.common.projectcreation 4 0 2023-10-23 13:45:03.226
+!MESSAGE Project is null
+
+!ENTRY org.eclipse.core.resources 4 77 2023-10-23 13:54:35.000
+!MESSAGE Invalid project description.
+!SUBENTRY 1 unknown 0 0 2023-10-23 13:54:35.001
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2023-10-23 13:54:35.001
+!MESSAGE /home/laptop/school/VRS/cv07 overlaps the location of another project: 'cv07'
+
+!ENTRY com.st.stm32cube.common.projectcreation 4 0 2023-10-23 13:54:35.001
+!MESSAGE Project is null
+
+!ENTRY org.eclipse.core.resources 4 77 2023-10-23 14:09:26.585
+!MESSAGE Invalid project description.
+!SUBENTRY 1 unknown 0 0 2023-10-23 14:09:26.585
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2023-10-23 14:09:26.585
+!MESSAGE /home/laptop/school/VRS/vrs_cvicenie_4 overlaps the location of another project: 'vrs_cvicenie_4'
+
+!ENTRY com.st.stm32cube.common.projectcreation 4 0 2023-10-23 14:09:26.585
+!MESSAGE Project is null
+
+!ENTRY org.eclipse.core.resources 4 77 2023-10-23 14:09:26.657
+!MESSAGE Invalid project description.
+!SUBENTRY 1 unknown 0 0 2023-10-23 14:09:26.657
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2023-10-23 14:09:26.657
+!MESSAGE /home/laptop/school/VRS/vrs_cvicenie_4 overlaps the location of another project: 'vrs_cvicenie_4'
+
+!ENTRY com.st.stm32cube.common.projectcreation 4 0 2023-10-23 14:09:26.657
+!MESSAGE Project is null
+
+!ENTRY org.eclipse.core.resources 4 77 2023-10-23 14:09:34.257
+!MESSAGE Invalid project description.
+!SUBENTRY 1 unknown 0 0 2023-10-23 14:09:34.257
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2023-10-23 14:09:34.257
+!MESSAGE /home/laptop/school/VRS/vrs_cvicenie_4 overlaps the location of another project: 'vrs_cvicenie_4'
+
+!ENTRY com.st.stm32cube.common.projectcreation 4 0 2023-10-23 14:09:34.257
+!MESSAGE Project is null
+
+!ENTRY org.eclipse.core.resources 4 77 2023-10-23 14:09:34.308
+!MESSAGE Invalid project description.
+!SUBENTRY 1 unknown 0 0 2023-10-23 14:09:34.308
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2023-10-23 14:09:34.308
+!MESSAGE /home/laptop/school/VRS/vrs_cvicenie_4 overlaps the location of another project: 'vrs_cvicenie_4'
+
+!ENTRY com.st.stm32cube.common.projectcreation 4 0 2023-10-23 14:09:34.308
+!MESSAGE Project is null
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2023-10-23 14:09:34.854
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.gdb.internal.ui.actions.DsfTerminateCommand$3$1@47429224): Status OK: unknown code=0 OK' resulted in a rejected execution exception.
+
+!ENTRY org.eclipse.core.resources 4 77 2023-10-23 14:09:49.402
+!MESSAGE Invalid project description.
+!SUBENTRY 1 unknown 0 0 2023-10-23 14:09:49.402
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2023-10-23 14:09:49.402
+!MESSAGE /home/laptop/school/VRS/vrs_cvicenie_4 overlaps the location of another project: 'vrs_cvicenie_4'
+
+!ENTRY com.st.stm32cube.common.projectcreation 4 0 2023-10-23 14:09:49.402
+!MESSAGE Project is null
+
+!ENTRY org.eclipse.core.resources 4 77 2023-10-23 14:09:49.422
+!MESSAGE Invalid project description.
+!SUBENTRY 1 unknown 0 0 2023-10-23 14:09:49.422
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2023-10-23 14:09:49.422
+!MESSAGE /home/laptop/school/VRS/vrs_cvicenie_4 overlaps the location of another project: 'vrs_cvicenie_4'
+
+!ENTRY com.st.stm32cube.common.projectcreation 4 0 2023-10-23 14:09:49.423
+!MESSAGE Project is null
+
+!ENTRY org.eclipse.core.resources 4 77 2023-10-23 14:10:24.639
+!MESSAGE Invalid project description.
+!SUBENTRY 1 unknown 0 0 2023-10-23 14:10:24.639
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2023-10-23 14:10:24.639
+!MESSAGE /home/laptop/school/VRS/vrs_cvicenie_4 overlaps the location of another project: 'vrs_cvicenie_4'
+
+!ENTRY com.st.stm32cube.common.projectcreation 4 0 2023-10-23 14:10:24.639
+!MESSAGE Project is null
+
+!ENTRY org.eclipse.core.resources 4 77 2023-10-23 14:10:24.668
+!MESSAGE Invalid project description.
+!SUBENTRY 1 unknown 0 0 2023-10-23 14:10:24.668
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2023-10-23 14:10:24.668
+!MESSAGE /home/laptop/school/VRS/vrs_cvicenie_4 overlaps the location of another project: 'vrs_cvicenie_4'
+
+!ENTRY com.st.stm32cube.common.projectcreation 4 0 2023-10-23 14:10:24.668
+!MESSAGE Project is null
+
+!ENTRY org.eclipse.core.resources 4 77 2023-10-23 14:10:28.858
+!MESSAGE Invalid project description.
+!SUBENTRY 1 unknown 0 0 2023-10-23 14:10:28.858
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2023-10-23 14:10:28.858
+!MESSAGE /home/laptop/school/VRS/vrs_cvicenie_4 overlaps the location of another project: 'vrs_cvicenie_4'
+
+!ENTRY com.st.stm32cube.common.projectcreation 4 0 2023-10-23 14:10:28.858
+!MESSAGE Project is null
+
+!ENTRY org.eclipse.core.resources 4 77 2023-10-23 14:10:28.918
+!MESSAGE Invalid project description.
+!SUBENTRY 1 unknown 0 0 2023-10-23 14:10:28.918
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2023-10-23 14:10:28.918
+!MESSAGE /home/laptop/school/VRS/vrs_cvicenie_4 overlaps the location of another project: 'vrs_cvicenie_4'
+
+!ENTRY com.st.stm32cube.common.projectcreation 4 0 2023-10-23 14:10:28.918
+!MESSAGE Project is null
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2023-10-23 14:10:30.568
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.gdb.internal.ui.actions.DsfTerminateCommand$3$1@506d426f): Status OK: unknown code=0 OK' resulted in a rejected execution exception.
+
+!ENTRY org.eclipse.ui 4 0 2023-10-23 14:10:32.209
+!MESSAGE Unhandled event loop exception
+!STACK 0
+java.lang.IllegalArgumentException: Argument not valid
+	at org.eclipse.swt.SWT.error(SWT.java:4899)
+	at org.eclipse.swt.SWT.error(SWT.java:4833)
+	at org.eclipse.swt.SWT.error(SWT.java:4804)
+	at org.eclipse.jface.text.DefaultDocumentAdapter.getLineAtOffset(DefaultDocumentAdapter.java:184)
+	at org.eclipse.swt.custom.StyledText.internalRedrawRange(StyledText.java:5473)
+	at org.eclipse.swt.custom.StyledText.setSelection(StyledText.java:9858)
+	at org.eclipse.swt.custom.StyledText.doSelection(StyledText.java:2859)
+	at org.eclipse.swt.custom.StyledText.doMouseSelection(StyledText.java:2437)
+	at org.eclipse.swt.custom.StyledText.doMouseLocationChange(StyledText.java:2422)
+	at org.eclipse.swt.custom.StyledText.handleMouseMove(StyledText.java:5903)
+	at org.eclipse.swt.custom.StyledText.lambda$28(StyledText.java:5431)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:5855)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1529)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:5065)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:4517)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1155)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1046)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:643)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:550)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:171)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:402)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:596)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1467)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1440)
+
+!ENTRY org.eclipse.ui 4 0 2023-10-23 14:10:32.226
+!MESSAGE Unhandled event loop exception
+!STACK 0
+java.lang.IllegalArgumentException: Argument not valid
+	at org.eclipse.swt.SWT.error(SWT.java:4899)
+	at org.eclipse.swt.SWT.error(SWT.java:4833)
+	at org.eclipse.swt.SWT.error(SWT.java:4804)
+	at org.eclipse.jface.text.DefaultDocumentAdapter.getLineAtOffset(DefaultDocumentAdapter.java:184)
+	at org.eclipse.swt.custom.StyledText.internalRedrawRange(StyledText.java:5473)
+	at org.eclipse.swt.custom.StyledText.setSelection(StyledText.java:9858)
+	at org.eclipse.swt.custom.StyledText.doSelection(StyledText.java:2859)
+	at org.eclipse.swt.custom.StyledText.doMouseSelection(StyledText.java:2439)
+	at org.eclipse.swt.custom.StyledText.doMouseLocationChange(StyledText.java:2422)
+	at org.eclipse.swt.custom.StyledText.handleMouseMove(StyledText.java:5903)
+	at org.eclipse.swt.custom.StyledText.lambda$28(StyledText.java:5431)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:5855)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1529)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:5065)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:4517)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1155)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1046)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:643)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:550)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:171)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:402)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:596)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1467)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1440)
+
+!ENTRY org.eclipse.ui 4 0 2023-10-23 14:10:32.257
+!MESSAGE Unhandled event loop exception
+!STACK 0
+java.lang.IllegalArgumentException: Argument not valid
+	at org.eclipse.swt.SWT.error(SWT.java:4899)
+	at org.eclipse.swt.SWT.error(SWT.java:4833)
+	at org.eclipse.swt.SWT.error(SWT.java:4804)
+	at org.eclipse.jface.text.DefaultDocumentAdapter.getLineAtOffset(DefaultDocumentAdapter.java:184)
+	at org.eclipse.swt.custom.StyledText.internalRedrawRange(StyledText.java:5473)
+	at org.eclipse.swt.custom.StyledText.setSelection(StyledText.java:9858)
+	at org.eclipse.swt.custom.StyledText.doSelection(StyledText.java:2859)
+	at org.eclipse.swt.custom.StyledText.doMouseSelection(StyledText.java:2439)
+	at org.eclipse.swt.custom.StyledText.doMouseLocationChange(StyledText.java:2422)
+	at org.eclipse.swt.custom.StyledText.handleMouseMove(StyledText.java:5903)
+	at org.eclipse.swt.custom.StyledText.lambda$28(StyledText.java:5431)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:5855)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1529)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:5065)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:4517)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1155)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1046)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:643)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:550)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:171)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:402)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:596)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1467)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1440)
+
+!ENTRY org.eclipse.core.resources 4 77 2023-10-23 14:12:16.454
+!MESSAGE Invalid project description.
+!SUBENTRY 1 unknown 0 0 2023-10-23 14:12:16.454
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2023-10-23 14:12:16.454
+!MESSAGE /home/laptop/school/VRS/vrs_cvicenie_4 overlaps the location of another project: 'vrs_cvicenie_4'
+
+!ENTRY com.st.stm32cube.common.projectcreation 4 0 2023-10-23 14:12:16.454
+!MESSAGE Project is null
+
+!ENTRY org.eclipse.core.resources 4 77 2023-10-23 14:12:50.244
+!MESSAGE Invalid project description.
+!SUBENTRY 1 unknown 0 0 2023-10-23 14:12:50.244
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2023-10-23 14:12:50.244
+!MESSAGE /home/laptop/school/VRS/vrs_cvicenie_4 overlaps the location of another project: 'vrs_cvicenie_4'
+
+!ENTRY com.st.stm32cube.common.projectcreation 4 0 2023-10-23 14:12:50.244
+!MESSAGE Project is null
+
+!ENTRY org.eclipse.core.resources 4 77 2023-10-23 14:12:54.971
+!MESSAGE Invalid project description.
+!SUBENTRY 1 unknown 0 0 2023-10-23 14:12:54.971
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2023-10-23 14:12:54.971
+!MESSAGE /home/laptop/school/VRS/vrs_cvicenie_4 overlaps the location of another project: 'vrs_cvicenie_4'
+
+!ENTRY com.st.stm32cube.common.projectcreation 4 0 2023-10-23 14:12:54.971
+!MESSAGE Project is null
+
+!ENTRY org.eclipse.core.resources 4 77 2023-10-23 14:12:55.004
+!MESSAGE Invalid project description.
+!SUBENTRY 1 unknown 0 0 2023-10-23 14:12:55.004
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2023-10-23 14:12:55.004
+!MESSAGE /home/laptop/school/VRS/vrs_cvicenie_4 overlaps the location of another project: 'vrs_cvicenie_4'
+
+!ENTRY com.st.stm32cube.common.projectcreation 4 0 2023-10-23 14:12:55.004
+!MESSAGE Project is null
+
+!ENTRY com.st.stm32cube.ide.mcu.stackanalyzer 4 0 2023-10-23 14:12:55.038
+!MESSAGE Stackanalyzer failed to analyze input
+!STACK 0
+java.lang.Exception: File: /home/laptop/school/VRS/vrs_cvicenie_4/Debug/vrs_cvicenie_4.elfdo not exists
+	at com.st.stm32cube.ide.mcu.utils.assembly.Disassembler.<init>(Disassembler.java:56)
+	at com.st.stm32cube.ide.mcu.utils.assembly.Disassembler.<init>(Disassembler.java:83)
+	at com.st.stm32cube.ide.mcu.stackanalyzer.ui.StackAnalyzerView.inputChanged(StackAnalyzerView.java:954)
+	at com.st.stm32cube.ide.mcu.stackanalyzer.ui.StackAnalyzerView.lambda$15(StackAnalyzerView.java:1307)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+
+!ENTRY org.eclipse.core.resources 4 77 2023-10-23 14:19:41.042
+!MESSAGE Invalid project description.
+!SUBENTRY 1 unknown 0 0 2023-10-23 14:19:41.042
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2023-10-23 14:19:41.042
+!MESSAGE /home/laptop/school/VRS/vrs_cvicenie_4 overlaps the location of another project: 'vrs_cvicenie_4'
+
+!ENTRY com.st.stm32cube.common.projectcreation 4 0 2023-10-23 14:19:41.042
+!MESSAGE Project is null
+
+!ENTRY org.eclipse.core.resources 4 77 2023-10-23 14:20:11.137
+!MESSAGE Invalid project description.
+!SUBENTRY 1 unknown 0 0 2023-10-23 14:20:11.137
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2023-10-23 14:20:11.137
+!MESSAGE /home/laptop/school/VRS/vrs_cvicenie_4 overlaps the location of another project: 'vrs_cvicenie_4'
+
+!ENTRY com.st.stm32cube.common.projectcreation 4 0 2023-10-23 14:20:11.137
+!MESSAGE Project is null
+
+!ENTRY org.eclipse.core.resources 4 77 2023-10-23 14:20:31.190
+!MESSAGE Invalid project description.
+!SUBENTRY 1 unknown 0 0 2023-10-23 14:20:31.190
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2023-10-23 14:20:31.190
+!MESSAGE /home/laptop/school/VRS/vrs_cvicenie_4 overlaps the location of another project: 'vrs_cvicenie_4'
+
+!ENTRY com.st.stm32cube.common.projectcreation 4 0 2023-10-23 14:20:31.190
+!MESSAGE Project is null
+
+!ENTRY org.eclipse.core.resources 4 77 2023-10-23 14:20:33.496
+!MESSAGE Invalid project description.
+!SUBENTRY 1 unknown 0 0 2023-10-23 14:20:33.496
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2023-10-23 14:20:33.496
+!MESSAGE /home/laptop/school/VRS/vrs_cvicenie_4 overlaps the location of another project: 'vrs_cvicenie_4'
+
+!ENTRY com.st.stm32cube.common.projectcreation 4 0 2023-10-23 14:20:33.496
+!MESSAGE Project is null
+
+!ENTRY org.eclipse.core.resources 4 77 2023-10-23 14:20:33.524
+!MESSAGE Invalid project description.
+!SUBENTRY 1 unknown 0 0 2023-10-23 14:20:33.524
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2023-10-23 14:20:33.524
+!MESSAGE /home/laptop/school/VRS/vrs_cvicenie_4 overlaps the location of another project: 'vrs_cvicenie_4'
+
+!ENTRY com.st.stm32cube.common.projectcreation 4 0 2023-10-23 14:20:33.524
+!MESSAGE Project is null
+
+!ENTRY org.eclipse.core.resources 4 77 2023-10-23 14:20:51.286
+!MESSAGE Invalid project description.
+!SUBENTRY 1 unknown 0 0 2023-10-23 14:20:51.286
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2023-10-23 14:20:51.286
+!MESSAGE /home/laptop/school/VRS/vrs_cvicenie_4 overlaps the location of another project: 'vrs_cvicenie_4'
+
+!ENTRY com.st.stm32cube.common.projectcreation 4 0 2023-10-23 14:20:51.286
+!MESSAGE Project is null
+
+!ENTRY org.eclipse.core.resources 4 77 2023-10-23 14:20:51.328
+!MESSAGE Invalid project description.
+!SUBENTRY 1 unknown 0 0 2023-10-23 14:20:51.328
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2023-10-23 14:20:51.328
+!MESSAGE /home/laptop/school/VRS/vrs_cvicenie_4 overlaps the location of another project: 'vrs_cvicenie_4'
+
+!ENTRY com.st.stm32cube.common.projectcreation 4 0 2023-10-23 14:20:51.328
+!MESSAGE Project is null
+
+!ENTRY org.eclipse.core.resources 4 77 2023-10-23 14:24:05.207
+!MESSAGE Invalid project description.
+!SUBENTRY 1 unknown 0 0 2023-10-23 14:24:05.207
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2023-10-23 14:24:05.207
+!MESSAGE /home/laptop/school/VRS/vrs_cvicenie_4 overlaps the location of another project: 'vrs_cvicenie_4'
+
+!ENTRY com.st.stm32cube.common.projectcreation 4 0 2023-10-23 14:24:05.207
+!MESSAGE Project is null
+
+!ENTRY org.eclipse.core.resources 4 77 2023-10-23 14:24:05.229
+!MESSAGE Invalid project description.
+!SUBENTRY 1 unknown 0 0 2023-10-23 14:24:05.229
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2023-10-23 14:24:05.229
+!MESSAGE /home/laptop/school/VRS/vrs_cvicenie_4 overlaps the location of another project: 'vrs_cvicenie_4'
+
+!ENTRY com.st.stm32cube.common.projectcreation 4 0 2023-10-23 14:24:05.229
+!MESSAGE Project is null
+
+!ENTRY org.eclipse.core.resources 4 77 2023-10-23 14:24:23.483
+!MESSAGE Invalid project description.
+!SUBENTRY 1 unknown 0 0 2023-10-23 14:24:23.483
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2023-10-23 14:24:23.483
+!MESSAGE /home/laptop/school/VRS/vrs_cvicenie_4 overlaps the location of another project: 'vrs_cvicenie_4'
+
+!ENTRY com.st.stm32cube.common.projectcreation 4 0 2023-10-23 14:24:23.484
+!MESSAGE Project is null
+
+!ENTRY org.eclipse.core.resources 4 77 2023-10-23 14:24:23.501
+!MESSAGE Invalid project description.
+!SUBENTRY 1 unknown 0 0 2023-10-23 14:24:23.502
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2023-10-23 14:24:23.502
+!MESSAGE /home/laptop/school/VRS/vrs_cvicenie_4 overlaps the location of another project: 'vrs_cvicenie_4'
+
+!ENTRY com.st.stm32cube.common.projectcreation 4 0 2023-10-23 14:24:23.502
+!MESSAGE Project is null
+
+!ENTRY org.eclipse.core.resources 4 77 2023-10-23 14:24:50.730
+!MESSAGE Invalid project description.
+!SUBENTRY 1 unknown 0 0 2023-10-23 14:24:50.731
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2023-10-23 14:24:50.731
+!MESSAGE /home/laptop/school/VRS/vrs_cvicenie_4 overlaps the location of another project: 'vrs_cvicenie_4'
+
+!ENTRY com.st.stm32cube.common.projectcreation 4 0 2023-10-23 14:24:50.731
+!MESSAGE Project is null
+
+!ENTRY org.eclipse.core.resources 4 77 2023-10-23 14:24:50.757
+!MESSAGE Invalid project description.
+!SUBENTRY 1 unknown 0 0 2023-10-23 14:24:50.757
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2023-10-23 14:24:50.757
+!MESSAGE /home/laptop/school/VRS/vrs_cvicenie_4 overlaps the location of another project: 'vrs_cvicenie_4'
+
+!ENTRY com.st.stm32cube.common.projectcreation 4 0 2023-10-23 14:24:50.757
+!MESSAGE Project is null
+
+!ENTRY org.eclipse.core.resources 4 77 2023-10-23 14:25:42.695
+!MESSAGE Invalid project description.
+!SUBENTRY 1 unknown 0 0 2023-10-23 14:25:42.695
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2023-10-23 14:25:42.695
+!MESSAGE /home/laptop/school/VRS/vrs_cvicenie_4 overlaps the location of another project: 'vrs_cvicenie_4'
+
+!ENTRY com.st.stm32cube.common.projectcreation 4 0 2023-10-23 14:25:42.695
+!MESSAGE Project is null
+
+!ENTRY org.eclipse.core.resources 4 77 2023-10-23 14:25:42.721
+!MESSAGE Invalid project description.
+!SUBENTRY 1 unknown 0 0 2023-10-23 14:25:42.721
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2023-10-23 14:25:42.721
+!MESSAGE /home/laptop/school/VRS/vrs_cvicenie_4 overlaps the location of another project: 'vrs_cvicenie_4'
+
+!ENTRY com.st.stm32cube.common.projectcreation 4 0 2023-10-23 14:25:42.721
+!MESSAGE Project is null
+
+!ENTRY org.eclipse.core.resources 4 77 2023-10-23 14:27:49.123
+!MESSAGE Invalid project description.
+!SUBENTRY 1 unknown 0 0 2023-10-23 14:27:49.123
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2023-10-23 14:27:49.123
+!MESSAGE /home/laptop/school/VRS/vrs_cvicenie_4 overlaps the location of another project: 'vrs_cvicenie_4'
+
+!ENTRY com.st.stm32cube.common.projectcreation 4 0 2023-10-23 14:27:49.123
+!MESSAGE Project is null
+
+!ENTRY org.eclipse.core.resources 4 77 2023-10-23 14:27:49.144
+!MESSAGE Invalid project description.
+!SUBENTRY 1 unknown 0 0 2023-10-23 14:27:49.144
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2023-10-23 14:27:49.144
+!MESSAGE /home/laptop/school/VRS/vrs_cvicenie_4 overlaps the location of another project: 'vrs_cvicenie_4'
+
+!ENTRY com.st.stm32cube.common.projectcreation 4 0 2023-10-23 14:27:49.144
+!MESSAGE Project is null
+
+!ENTRY org.eclipse.core.resources 4 77 2023-10-23 14:28:52.123
+!MESSAGE Invalid project description.
+!SUBENTRY 1 unknown 0 0 2023-10-23 14:28:52.123
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2023-10-23 14:28:52.123
+!MESSAGE /home/laptop/school/VRS/vrs_cvicenie_4 overlaps the location of another project: 'vrs_cvicenie_4'
+
+!ENTRY com.st.stm32cube.common.projectcreation 4 0 2023-10-23 14:28:52.123
+!MESSAGE Project is null
+
+!ENTRY org.eclipse.core.resources 4 77 2023-10-23 14:28:52.148
+!MESSAGE Invalid project description.
+!SUBENTRY 1 unknown 0 0 2023-10-23 14:28:52.149
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2023-10-23 14:28:52.149
+!MESSAGE /home/laptop/school/VRS/vrs_cvicenie_4 overlaps the location of another project: 'vrs_cvicenie_4'
+
+!ENTRY com.st.stm32cube.common.projectcreation 4 0 2023-10-23 14:28:52.149
+!MESSAGE Project is null
+
+!ENTRY org.eclipse.core.resources 4 77 2023-10-23 14:30:53.019
+!MESSAGE Invalid project description.
+!SUBENTRY 1 unknown 0 0 2023-10-23 14:30:53.019
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2023-10-23 14:30:53.019
+!MESSAGE /home/laptop/school/VRS/vrs_cvicenie_4 overlaps the location of another project: 'vrs_cvicenie_4'
+
+!ENTRY com.st.stm32cube.common.projectcreation 4 0 2023-10-23 14:30:53.019
+!MESSAGE Project is null
+
+!ENTRY org.eclipse.core.resources 4 77 2023-10-23 14:30:53.046
+!MESSAGE Invalid project description.
+!SUBENTRY 1 unknown 0 0 2023-10-23 14:30:53.046
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2023-10-23 14:30:53.046
+!MESSAGE /home/laptop/school/VRS/vrs_cvicenie_4 overlaps the location of another project: 'vrs_cvicenie_4'
+
+!ENTRY com.st.stm32cube.common.projectcreation 4 0 2023-10-23 14:30:53.047
+!MESSAGE Project is null
+
+!ENTRY org.eclipse.core.resources 4 77 2023-10-23 14:31:27.470
+!MESSAGE Invalid project description.
+!SUBENTRY 1 unknown 0 0 2023-10-23 14:31:27.470
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2023-10-23 14:31:27.470
+!MESSAGE /home/laptop/school/VRS/vrs_cvicenie_4 overlaps the location of another project: 'vrs_cvicenie_4'
+
+!ENTRY com.st.stm32cube.common.projectcreation 4 0 2023-10-23 14:31:27.470
+!MESSAGE Project is null
+
+!ENTRY org.eclipse.core.resources 4 77 2023-10-23 14:31:27.498
+!MESSAGE Invalid project description.
+!SUBENTRY 1 unknown 0 0 2023-10-23 14:31:27.498
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2023-10-23 14:31:27.498
+!MESSAGE /home/laptop/school/VRS/vrs_cvicenie_4 overlaps the location of another project: 'vrs_cvicenie_4'
+
+!ENTRY com.st.stm32cube.common.projectcreation 4 0 2023-10-23 14:31:27.498
+!MESSAGE Project is null
+
+!ENTRY org.eclipse.core.resources 4 77 2023-10-23 14:32:39.684
+!MESSAGE Invalid project description.
+!SUBENTRY 1 unknown 0 0 2023-10-23 14:32:39.684
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2023-10-23 14:32:39.684
+!MESSAGE /home/laptop/school/VRS/vrs_cvicenie_4 overlaps the location of another project: 'vrs_cvicenie_4'
+
+!ENTRY com.st.stm32cube.common.projectcreation 4 0 2023-10-23 14:32:39.684
+!MESSAGE Project is null
+
+!ENTRY org.eclipse.core.resources 4 77 2023-10-23 14:32:39.715
+!MESSAGE Invalid project description.
+!SUBENTRY 1 unknown 0 0 2023-10-23 14:32:39.715
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2023-10-23 14:32:39.715
+!MESSAGE /home/laptop/school/VRS/vrs_cvicenie_4 overlaps the location of another project: 'vrs_cvicenie_4'
+
+!ENTRY com.st.stm32cube.common.projectcreation 4 0 2023-10-23 14:32:39.715
+!MESSAGE Project is null
+
+!ENTRY org.eclipse.core.resources 4 77 2023-10-23 14:33:36.099
+!MESSAGE Invalid project description.
+!SUBENTRY 1 unknown 0 0 2023-10-23 14:33:36.100
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2023-10-23 14:33:36.100
+!MESSAGE /home/laptop/school/VRS/vrs_cvicenie_4 overlaps the location of another project: 'vrs_cvicenie_4'
+
+!ENTRY com.st.stm32cube.common.projectcreation 4 0 2023-10-23 14:33:36.100
+!MESSAGE Project is null
+
+!ENTRY org.eclipse.core.resources 4 77 2023-10-23 14:33:39.421
+!MESSAGE Invalid project description.
+!SUBENTRY 1 unknown 0 0 2023-10-23 14:33:39.421
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2023-10-23 14:33:39.421
+!MESSAGE /home/laptop/school/VRS/vrs_cvicenie_4 overlaps the location of another project: 'vrs_cvicenie_4'
+
+!ENTRY com.st.stm32cube.common.projectcreation 4 0 2023-10-23 14:33:39.421
+!MESSAGE Project is null
+
+!ENTRY org.eclipse.core.resources 4 77 2023-10-23 14:33:39.437
+!MESSAGE Invalid project description.
+!SUBENTRY 1 unknown 0 0 2023-10-23 14:33:39.437
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2023-10-23 14:33:39.437
+!MESSAGE /home/laptop/school/VRS/vrs_cvicenie_4 overlaps the location of another project: 'vrs_cvicenie_4'
+
+!ENTRY com.st.stm32cube.common.projectcreation 4 0 2023-10-23 14:33:39.437
+!MESSAGE Project is null
+
+!ENTRY org.eclipse.core.resources 4 77 2023-10-23 14:34:56.275
+!MESSAGE Invalid project description.
+!SUBENTRY 1 unknown 0 0 2023-10-23 14:34:56.275
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2023-10-23 14:34:56.275
+!MESSAGE /home/laptop/school/VRS/vrs_cvicenie_4 overlaps the location of another project: 'vrs_cvicenie_4'
+
+!ENTRY com.st.stm32cube.common.projectcreation 4 0 2023-10-23 14:34:56.275
+!MESSAGE Project is null
+
+!ENTRY org.eclipse.core.resources 4 77 2023-10-23 14:34:56.301
+!MESSAGE Invalid project description.
+!SUBENTRY 1 unknown 0 0 2023-10-23 14:34:56.301
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2023-10-23 14:34:56.301
+!MESSAGE /home/laptop/school/VRS/vrs_cvicenie_4 overlaps the location of another project: 'vrs_cvicenie_4'
+
+!ENTRY com.st.stm32cube.common.projectcreation 4 0 2023-10-23 14:34:56.302
+!MESSAGE Project is null
+
+!ENTRY org.eclipse.core.resources 4 77 2023-10-23 14:35:45.191
+!MESSAGE Invalid project description.
+!SUBENTRY 1 unknown 0 0 2023-10-23 14:35:45.191
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2023-10-23 14:35:45.191
+!MESSAGE /home/laptop/school/VRS/vrs_cvicenie_4 overlaps the location of another project: 'vrs_cvicenie_4'
+
+!ENTRY com.st.stm32cube.common.projectcreation 4 0 2023-10-23 14:35:45.191
+!MESSAGE Project is null
+
+!ENTRY org.eclipse.core.resources 4 77 2023-10-23 14:35:45.215
+!MESSAGE Invalid project description.
+!SUBENTRY 1 unknown 0 0 2023-10-23 14:35:45.215
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2023-10-23 14:35:45.215
+!MESSAGE /home/laptop/school/VRS/vrs_cvicenie_4 overlaps the location of another project: 'vrs_cvicenie_4'
+
+!ENTRY com.st.stm32cube.common.projectcreation 4 0 2023-10-23 14:35:45.215
+!MESSAGE Project is null
