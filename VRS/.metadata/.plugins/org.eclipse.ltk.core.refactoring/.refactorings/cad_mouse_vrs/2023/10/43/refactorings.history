@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;cad_mouse_vrs/Core/drivers/tlv493/tlv493&apos; to &apos;tlv493.cpp&apos;" description="Rename resource &apos;tlv493&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="Core/drivers/tlv493/tlv493" name="tlv493.cpp" stamp="1698150772908" updateReferences="true"/>
+</session>

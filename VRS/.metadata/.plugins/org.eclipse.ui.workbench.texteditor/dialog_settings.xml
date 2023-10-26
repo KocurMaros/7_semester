@@ -6,8 +6,9 @@
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
-		<item key="selection" value=""/>
+		<item key="selection" value="USART2_PutBuffer"/>
 		<list key="findhistory">
+			<item value="USART2_PutBuffer"/>
 			<item value="proccesDmaData"/>
 			<item value="bufferUSART2dma"/>
 			<item value="callback"/>

@@ -1,0 +1,2 @@
+../Core/Drivers/tlv493/tlv493.hpp:83:1:tlv493::tlv493()	16	static
+../Core/Drivers/tlv493/tlv493.hpp:87:1:tlv493::~tlv493()	16	static

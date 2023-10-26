@@ -1,0 +1,10 @@
+15:33:27 **** Incremental Build of configuration Debug for project cad_mouse_vrs ****
+make -j12 all 
+arm-none-eabi-size   cad_mouse_vrs.elf 
+   text	   data	    bss	    dec	    hex	filename
+   7464	     12	   1564	   9040	   2350	cad_mouse_vrs.elf
+Finished building: default.size.stdout
+ 
+
+15:33:27 Build Finished. 0 errors, 0 warnings. (took 120ms)
+
