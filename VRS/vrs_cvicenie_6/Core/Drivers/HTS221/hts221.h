@@ -38,7 +38,7 @@
 #define HTS221_REG_T1_OUT_H 0x3F
 
 
-void hts221_write_byte(uint8_t reg_address, uint8_t data);
+void hts221_write_byte(uint8_t reg_address, uint8_t *data,uint8_t len);
 uint8_t hts221_read_byte(uint8_t reg_address);
 
 uint8_t hts221_init();
