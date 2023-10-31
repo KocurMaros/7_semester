@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MF0 version="1.1" packageUris="http://schema.mathworks.com/mf0/SlsaMaskTree/R2020a">
+  <slsa.mm.maskTree.MaskTree type="slsa.mm.maskTree.MaskTree" uuid="09d09cc6-3142-489c-af84-f0398d20cfa0">
+    <maskedBlocks type="slsa.mm.maskTree.MaskedBlock" uuid="df5d1c4c-0390-48ab-a3ef-7f9c4ec2896b">
+      <blockPath>UM3/Signal Builder</blockPath>
+      <id>UM3:21</id>
+      <masks type="slsa.mm.maskTree.Mask" uuid="d3700e29-3e15-4df5-a0a7-a296aab1be28">
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="b26a23ad-3a3d-49e3-a89d-86c074fac101">
+          <evaluate>true</evaluate>
+          <expression>[0:10]</expression>
+          <isTunable>true</isTunable>
+          <name>tuvar</name>
+        </dialogParameters>
+        <initializationCode>if ~strcmp(get_param(bdroot(gcbh),&apos;SimulationStatus&apos;),&apos;stopped&apos;) tuvar = sigbuilder_block(&apos;maskInit&apos;); end</initializationCode>
+      </masks>
+      <parentId>root</parentId>
+    </maskedBlocks>
+    <maskedBlocks type="slsa.mm.maskTree.MaskedBlock" uuid="746e4605-6fee-42e2-aac3-3690f1e1a59b">
+      <blockPath>UM3/PID Controller</blockPath>
+      <id>UM3:27</id>
+      <masks type="slsa.mm.maskTree.Mask" uuid="3d195de3-c246-40e5-932f-9d8c7b683a4a">
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="6e089148-993a-49ef-bb18-efe33c8e0a46">
+          <evaluate>true</evaluate>
+          <expression>1</expression>
+          <name>Controller</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="b1c76cfd-58ad-412b-998d-ccddf8f134b4">
+          <evaluate>true</evaluate>
+          <expression>2</expression>
+          <name>Form</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="56a35d8d-7471-447d-ba41-c16776c13bd9">
+          <evaluate>true</evaluate>
+          <expression>1</expression>
+          <name>TimeDomain</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="c5e82cb8-e528-40db-aa55-06e17d2fc9a8">
+          <evaluate>true</evaluate>
+          <expression>1</expression>
+          <name>ControllerParametersSource</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="d0456195-ae89-4b64-b42f-7859c81b51f1">
+          <evaluate>true</evaluate>
+          <expression>P</expression>
+          <isTunable>true</isTunable>
+          <name>P</name>
+          <referencedVariables type="slsa.mm.maskTree.Variable" uuid="cc1e69b7-7c99-4bc4-a9a5-5916f6dd7014">
+            <name>P</name>
+            <value></value>
+            <workspace>global-workspace</workspace>
+          </referencedVariables>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="d1da2dc0-2c80-4f10-b163-f96bce454c1f">
+          <evaluate>true</evaluate>
+          <expression>I</expression>
+          <isTunable>true</isTunable>
+          <name>I</name>
+          <referencedVariables type="slsa.mm.maskTree.Variable" uuid="7ac7cd66-759d-49af-8dad-b8f0b1feeedc">
+            <name>I</name>
+            <value></value>
+            <workspace>global-workspace</workspace>
+          </referencedVariables>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="78011382-38ad-48b3-ae82-a523bb956ef2">
+          <evaluate>true</evaluate>
+          <expression>0</expression>
+          <name>UseKiTs</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="28e61110-a9b7-4b02-8409-0be499a95e0a">
+          <evaluate>true</evaluate>
+          <expression>D</expression>
+          <isTunable>true</isTunable>
+          <name>D</name>
+          <referencedVariables type="slsa.mm.maskTree.Variable" uuid="def4ec6f-fd19-43ab-adb9-4af9e12c1120">
+            <name>D</name>
+            <value></value>
+            <workspace>global-workspace</workspace>
+          </referencedVariables>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="3d71104c-8979-48cd-b889-3f651683caa7">
+          <evaluate>true</evaluate>
+          <expression>100</expression>
+          <isTunable>true</isTunable>
+          <name>N</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="cf75bfb4-c937-4980-a05c-da0465b7ee5a">
+          <evaluate>true</evaluate>
+          <expression>1</expression>
+          <name>TunerSelectOption</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="0ef02641-9ce9-4972-a59d-8dcc2aad7311">
+          <expression>on</expression>
+          <name>ZeroCross</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="1a27c50b-6000-4a21-a371-e3f97cad3e9c">
+          <evaluate>true</evaluate>
+          <expression>1</expression>
+          <name>InitialConditionSource</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="9af6cd52-8b82-400d-b9a7-e921d4fbf96f">
+          <evaluate>true</evaluate>
+          <expression>0</expression>
+          <isTunable>true</isTunable>
+          <name>InitialConditionForIntegrator</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="9ff1560e-7873-45b6-8176-b8c1c95e0459">
+          <evaluate>true</evaluate>
+          <expression>0</expression>
+          <isTunable>true</isTunable>
+          <name>InitialConditionForFilter</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="3f56d651-ed76-4748-ba4a-6e4b4f11f57f">
+          <evaluate>true</evaluate>
+          <expression>1</expression>
+          <name>ExternalReset</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="caec9fc2-eee5-48f2-8632-7c0ca65b0c31">
+          <expression>off</expression>
+          <name>IgnoreLimit</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="176dd7dd-d247-4c41-a9ca-0e464bec1fe0">
+          <evaluate>true</evaluate>
+          <expression>0</expression>
+          <name>TrackingMode</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="94605571-d901-4e60-a075-4ada3907885e">
+          <evaluate>true</evaluate>
+          <expression>0</expression>
+          <name>LimitOutput</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="c2721e3c-3a4b-4263-bdb2-bb393e3dc8e6">
+          <expression>off</expression>
+          <name>LimitIntegrator</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="9a2fe7e6-6a13-4ef4-b285-0596dd658da9">
+          <expression>Floor</expression>
+          <name>RndMeth</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="7a1e4a16-ecf9-4d60-b35e-6bb4f2d08f54">
+          <expression>off</expression>
+          <name>SaturateOnIntegerOverflow</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="da6c5634-2e55-4f9b-aa4e-a12325622947">
+          <expression>off</expression>
+          <name>LockScale</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="1cc98e5e-e3a0-4b63-b209-8a3c8d60eb64">
+          <expression>Inherit: Inherit via internal rule</expression>
+          <name>PGainOutDataTypeStr</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="62098195-2d33-4417-9d89-229276d3716b">
+          <evaluate>true</evaluate>
+          <expression>[]</expression>
+          <name>POutMin</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="f929f9cb-fa95-4716-8eab-e139c4468ce2">
+          <evaluate>true</evaluate>
+          <expression>[]</expression>
+          <name>POutMax</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="312ec283-a981-487a-b3de-698c095415ba">
+          <expression>Inherit: Inherit via internal rule</expression>
+          <name>IGainOutDataTypeStr</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="3835f886-6371-4c03-b278-1f541d2a6240">
+          <evaluate>true</evaluate>
+          <expression>[]</expression>
+          <name>IOutMin</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="2727219c-67a8-4d48-8127-02352403b6d8">
+          <evaluate>true</evaluate>
+          <expression>[]</expression>
+          <name>IOutMax</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="ed6cd3ea-db7a-4670-a24a-19f131685dc9">
+          <expression>Inherit: Inherit via internal rule</expression>
+          <name>DGainOutDataTypeStr</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="3d355504-52a5-41b4-a3f5-6a4ee166b745">
+          <evaluate>true</evaluate>
+          <expression>[]</expression>
+          <name>DOutMin</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="963b06bc-59ba-49e9-a1c0-3b76b080cb31">
+          <evaluate>true</evaluate>
+          <expression>[]</expression>
+          <name>DOutMax</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="53b6c607-6834-4c65-be04-4704f48f2559">
+          <expression>Inherit: Inherit via internal rule</expression>
+          <name>NGainOutDataTypeStr</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="a9ec71ab-735e-4041-a41c-2bc2c614bfc9">
+          <evaluate>true</evaluate>
+          <expression>[]</expression>
+          <name>NOutMin</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="f371d48d-c889-4258-96ca-c433c4f44fb8">
+          <evaluate>true</evaluate>
+          <expression>[]</expression>
+          <name>NOutMax</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="5c5fd5f4-cf18-4b41-b827-fbf70359a6ce">
+          <expression>Inherit: Inherit via internal rule</expression>
+          <name>SumOutDataTypeStr</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="5295d516-682a-4561-8fc4-eab787f8b05b">
+          <evaluate>true</evaluate>
+          <expression>[]</expression>
+          <name>SumOutMin</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="36eae87f-30c0-42f4-aa36-f3e45d886478">
+          <evaluate>true</evaluate>
+          <expression>[]</expression>
+          <name>SumOutMax</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="599107f3-92bf-4166-86dc-d3a675e195c1">
+          <expression>Inherit: Inherit via internal rule</expression>
+          <name>PParamDataTypeStr</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="b485542c-b1ae-41d4-9cf7-8f613168c4f3">
+          <evaluate>true</evaluate>
+          <expression>[]</expression>
+          <name>PParamMin</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="3cb108b9-c55b-4086-87dd-cd30f2c20d51">
+          <evaluate>true</evaluate>
+          <expression>[]</expression>
+          <name>PParamMax</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="9e041ffa-bb0d-48f9-9e5f-ab0fb0999143">
+          <expression>Inherit: Inherit via internal rule</expression>
+          <name>IParamDataTypeStr</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="1c77085a-1b4d-4dc9-bcf9-e3cfd0e5500f">
+          <evaluate>true</evaluate>
+          <expression>[]</expression>
+          <name>IParamMin</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="01377c98-3534-4ef1-924a-ac485e7f7c13">
+          <evaluate>true</evaluate>
+          <expression>[]</expression>
+          <name>IParamMax</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="9f5e72a6-3277-41e1-998a-f08b0f491461">
+          <expression>Inherit: Inherit via internal rule</expression>
+          <name>DParamDataTypeStr</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="fd4750e3-960b-48fc-aa48-dc7468325374">
+          <evaluate>true</evaluate>
+          <expression>[]</expression>
+          <name>DParamMin</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="54b2ce81-449c-43a0-80ca-98a3121ea7be">
+          <evaluate>true</evaluate>
+          <expression>[]</expression>
+          <name>DParamMax</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="f8508993-a904-4f51-8c96-398cadd43716">
+          <expression>Inherit: Inherit via internal rule</expression>
+          <name>NParamDataTypeStr</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="316635df-0fd5-4a12-b1e2-236db43d4869">
+          <evaluate>true</evaluate>
+          <expression>[]</expression>
+          <name>NParamMin</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="ccdff9f2-0f6f-4512-93f7-0b8d3438f824">
+          <evaluate>true</evaluate>
+          <expression>[]</expression>
+          <name>NParamMax</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="83cff526-19d7-4568-a798-b17eb59f003f">
+          <expression>Inherit: Inherit via internal rule</expression>
+          <name>SumDOutDataTypeStr</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="d2227cbc-c84c-47e6-a96c-7961186a87a9">
+          <evaluate>true</evaluate>
+          <expression>[]</expression>
+          <name>SumDOutMin</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="ea86fb8d-1f67-4bf4-8a91-ff3052dba5f1">
+          <evaluate>true</evaluate>
+          <expression>[]</expression>
+          <name>SumDOutMax</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="6ba2e758-2aab-4551-9058-723ee5f4ebd4">
+          <expression>Inherit: Inherit via internal rule</expression>
+          <name>SumAccumDataTypeStr</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="1d02e7f4-412a-429f-a56e-fcc30d5625bb">
+          <expression>Inherit: Inherit via internal rule</expression>
+          <name>SumDAccumDataTypeStr</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="9f0d7fb5-4689-4cbe-a488-ed752a6551e0">
+          <expression>Inherit: Inherit via back propagation</expression>
+          <name>NCopyOutDataTypeStr</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="3a0ba591-9f61-4fdd-b117-b4b9a4065e8c">
+          <evaluate>true</evaluate>
+          <expression>[]</expression>
+          <name>NCopyOutMin</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="6fe74c3b-098d-4aba-b580-f8a4ced74394">
+          <evaluate>true</evaluate>
+          <expression>[]</expression>
+          <name>NCopyOutMax</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="15ea1650-f1f6-4c41-8a44-f4e3d26b8b61">
+          <expression>&apos;&apos;</expression>
+          <name>IntegratorContinuousStateAttributes</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="365a5eba-c6b5-403b-ad52-babab4267623">
+          <expression>&apos;&apos;</expression>
+          <name>FilterContinuousStateAttributes</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="3b060b7e-2564-4033-90ee-da705ea5258e">
+          <expression>Disabled</expression>
+          <name>SatVariant</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="9909b219-0fd4-4793-8cae-353c256f2d39">
+          <expression>InternalTs</expression>
+          <name>TsampFilterVariant</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="02cf46f4-3630-484f-a843-833a9cebf266">
+          <expression>Passthrough</expression>
+          <name>TsampNgainVariant</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="37f9a481-ef51-4a72-81a0-f96725188ae1">
+          <expression>Disabled_SignalSpec</expression>
+          <name>TsampIntegralVariant</name>
+        </dialogParameters>
+        <dialogParameters type="slsa.mm.maskTree.DialogParameterInfo" uuid="b8593836-e7ec-4bba-a8b3-fcc3c9b8f2be">
+          <expression>Auto</expression>
+          <name>InitialConditionSetting</name>
+        </dialogParameters>
+        <initializationCode>
+SampleTime = pidpack.PIDConfig.maskInitialization(gcbh, SampleTime);</initializationCode>
+        <skipInitializationCode>true</skipInitializationCode>
+      </masks>
+      <parentId>root</parentId>
+    </maskedBlocks>
+    <maskedBlocks type="slsa.mm.maskTree.MaskedBlock" uuid="45b6a091-28f0-4e27-a172-74476bbfac8d">
+      <childrenIds>UM3:21</childrenIds>
+      <childrenIds>UM3:27</childrenIds>
+      <id>root</id>
+    </maskedBlocks>
+    <referencedGlobalWorkspaceVariables type="slsa.mm.maskTree.Variable" uuid="6374cfde-6ae2-4604-94b3-2de0da20aa5c">
+      <name>D</name>
+      <value>AAFJTQAAAAAOAAAAOAAAAAYAAAAIAAAABgAAAAAAAAAFAAAACAAAAAEAAAABAAAAAQAAAAAAAAAJAAAACAAAAKPmryun60VA</value>
+      <workspace>global-workspace</workspace>
+    </referencedGlobalWorkspaceVariables>
+    <referencedGlobalWorkspaceVariables type="slsa.mm.maskTree.Variable" uuid="091a99e2-de37-40ed-8788-748dbc8b057c">
+      <name>I</name>
+      <value>AAFJTQAAAAAOAAAAOAAAAAYAAAAIAAAABgAAAAAAAAAFAAAACAAAAAEAAAABAAAAAQAAAAAAAAAJAAAACAAAALeWC5j5hCxA</value>
+      <workspace>global-workspace</workspace>
+    </referencedGlobalWorkspaceVariables>
+    <referencedGlobalWorkspaceVariables type="slsa.mm.maskTree.Variable" uuid="02a38920-436b-4048-9e7b-9c1678af2530">
+      <name>P</name>
+      <value>AAFJTQAAAAAOAAAAOAAAAAYAAAAIAAAABgAAAAAAAAAFAAAACAAAAAEAAAABAAAAAQAAAAAAAAAJAAAACAAAAHmk6CZ3a0JA</value>
+      <workspace>global-workspace</workspace>
+    </referencedGlobalWorkspaceVariables>
+    <flags type="slsa.mm.maskTree.MaskTreeFlags" uuid="188718ee-b9ed-44d2-8fcb-49bd48cd073f"/>
+  </slsa.mm.maskTree.MaskTree>
+</MF0>

@@ -1,10 +1,31 @@
-15:33:27 **** Incremental Build of configuration Debug for project cad_mouse_vrs ****
+18:07:29 **** Incremental Build of configuration Debug for project cad_mouse_vrs ****
 make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32F303x8 -DUSE_FULL_LL_DRIVER -DHSE_VALUE=8000000 -DHSE_STARTUP_TIMEOUT=100 -DLSE_STARTUP_TIMEOUT=5000 -DLSE_VALUE=32768 -DEXTERNAL_CLOCK_VALUE=8000000 -DHSI_VALUE=8000000 -DLSI_VALUE=40000 -DVDD_VALUE=3300 -DPREFETCH_ENABLE=1 -c -I../Core/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F3xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:95:3: warning: implicit declaration of function 'MX_DMA_Init'; did you mean 'LL_DMA_Init'? [-Wimplicit-function-declaration]
+   95 |   MX_DMA_Init();
+      |   ^~~~~~~~~~~
+      |   LL_DMA_Init
+../Core/Src/main.c:109:22: warning: pointer targets in passing argument 1 of 'USART2_PutBuffer' differ in signedness [-Wpointer-sign]
+  109 |     USART2_PutBuffer(s,strlen(s));
+      |                      ^
+      |                      |
+      |                      char *
+In file included from ../Core/Src/main.c:23:
+../Core/Inc/usart.h:39:32: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+   39 | void USART2_PutBuffer(uint8_t *buffer, uint8_t length);
+      |                       ~~~~~~~~~^~~~~~
+arm-none-eabi-g++ -o "cad_mouse_vrs.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/laptop/school/VRS_Mouse_App/cad_mouse_vrs/STM32F303K8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="cad_mouse_vrs.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: cad_mouse_vrs.elf
+ 
 arm-none-eabi-size   cad_mouse_vrs.elf 
+arm-none-eabi-objdump -h -S  cad_mouse_vrs.elf  > "cad_mouse_vrs.list"
    text	   data	    bss	    dec	    hex	filename
-   7464	     12	   1564	   9040	   2350	cad_mouse_vrs.elf
+  10152	     12	   1836	  12000	   2ee0	cad_mouse_vrs.elf
 Finished building: default.size.stdout
  
+Finished building: cad_mouse_vrs.list
+ 
 
-15:33:27 Build Finished. 0 errors, 0 warnings. (took 120ms)
+18:07:30 Build Finished. 0 errors, 2 warnings. (took 330ms)
 

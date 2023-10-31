@@ -6,8 +6,10 @@
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
-		<item key="selection" value="USART2_PutBuffer"/>
+		<item key="selection" value="GPIOA"/>
 		<list key="findhistory">
+			<item value="GPIOA"/>
+			<item value="I2C1_EV_IRQHandler"/>
 			<item value="USART2_PutBuffer"/>
 			<item value="proccesDmaData"/>
 			<item value="bufferUSART2dma"/>
@@ -27,5 +29,9 @@
 		<item key="DIALOG_WIDTH" value="363"/>
 		<item key="DIALOG_HEIGHT" value="417"/>
 		<item key="DIALOG_FONT_NAME" value="1|Ubuntu|11.0|0|GTK|1|"/>
+	</section>
+	<section name="org.eclipse.ui.texteditor.GotoLineAction$GotoLineDialog_dialogBounds">
+		<item key="DIALOG_X_ORIGIN" value="686"/>
+		<item key="DIALOG_Y_ORIGIN" value="382"/>
 	</section>
 </section>

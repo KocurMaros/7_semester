@@ -39,13 +39,16 @@ uint8_t hts221_init()
 	// read calibration data
 	uint8_t h0_rh_x2 = hts221_read_byte(HTS221_REG_H0_rH_x2);
 	uint8_t h1_rh_x2 = hts221_read_byte(HTS221_REG_H1_rH_x2);
+
 	uint8_t t0_degC_x8_l = hts221_read_byte(HTS221_REG_T0_degC_x8);
 	uint8_t t1_degC_x8_l = hts221_read_byte(HTS221_REG_T1_degC_x8);
 	uint8_t t1_t0_msb = hts221_read_byte(HTS221_REG_T1_T0_MSB);
+
 	uint8_t h0_t0_out_l = hts221_read_byte(HTS221_REG_H0_T0_OUT_L);
 	uint8_t h0_t0_out_h = hts221_read_byte(HTS221_REG_H0_T0_OUT_H);
 	uint8_t h1_t0_out_l = hts221_read_byte(HTS221_REG_H1_T0_OUT_L);
 	uint8_t h1_t0_out_h = hts221_read_byte(HTS221_REG_H1_T0_OUT_H);
+
 	uint8_t t0_out_l = hts221_read_byte(HTS221_REG_T0_OUT_L);
 	uint8_t t0_out_h = hts221_read_byte(HTS221_REG_T0_OUT_H);
 	uint8_t t1_out_l = hts221_read_byte(HTS221_REG_T1_OUT_L);
@@ -53,6 +56,7 @@ uint8_t hts221_init()
 
 	int16_t t0_out = t0_out_l | (t0_out_h << 8);
 	int16_t t1_out = t1_out_l | (t1_out_h << 8);
+
 	int16_t t0_degC_x8 = t0_degC_x8_l | ((t1_t0_msb & 0b11) << 8);
 	int16_t t1_degC_x8 = t1_degC_x8_l | ((t1_t0_msb & 0b1100) << (8 - 2));
 

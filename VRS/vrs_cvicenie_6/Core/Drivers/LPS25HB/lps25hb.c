@@ -37,8 +37,6 @@ uint8_t lps25hb_init()
 	}
 
 	// set up sensor registers
-
-	// uint8_t ctrl_reg1 = 0b11000000; // power enable, ODR 25Hz, interrupts off, BDU off, Autozero off
 	uint8_t ctrl_reg1 = 0b00110000; 
 	lps25hb_write_byte(LPS25HB_REG_CTRL_REG1, &ctrl_reg1,1);
 

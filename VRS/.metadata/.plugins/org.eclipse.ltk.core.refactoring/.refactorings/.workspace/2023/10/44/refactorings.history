@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Delete resource &apos;cad_mouse_vrs&apos;" deleteContents="false" description="Delete resource &apos;cad_mouse_vrs&apos;" element1="/cad_mouse_vrs" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1698599167545"/>
+</session>
