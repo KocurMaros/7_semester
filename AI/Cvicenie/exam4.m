@@ -30,12 +30,15 @@ for gen=1:numgen
         try
             out=sim("exam3");
             % Fit(gen,i) = sum(abs(out.e.Data));
-            Fit(gen,i) = sum(abs(out.e.Data)+a*abs(out.de.Data)+b*abs(out.u.Data)+c*abs(out.du.Data));        
+            Fit(gen,i) = sum(abs(out.e.Data)+a*abs(out.de.Data)+b*abs(out.u.Data)+c*abs(out.du.Data)); 
+            if(max(out.e.Data) > 3)
+                Fit(gen,i) = 100000;
+            end
         catch
             Fit(gen,i) = 100000;
         end
     end
-    evolution(gen)=min(Fit(gen,:));	% convergence graph of the solution
+    evolutions(gen)=min(Fit(gen,:));	% convergence graph of the solution
     % GA
     Best=selbest(Pop,Fit(gen,:),[1,1,1,1,1]);
     Old=selrand(Pop,Fit(gen,:),5);
