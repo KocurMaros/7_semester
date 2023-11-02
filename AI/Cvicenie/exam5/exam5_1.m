@@ -37,20 +37,14 @@ for gen1=1:numgen
             % Fit(gen,i) = sum(abs(out.e.Data));
             Fit1(gen1,i) = sum(abs(out.e.Data)+a*abs(out.de.Data)+b*abs(out.u.Data)+c*abs(out.du.Data)); 
 
-            lower_index = find(out.e.Time == 1);
-            upper_index = find(out.e.Time == 6);
             trash = decide_if_value_in_interval_is_less_than_input_value(out.y.Data, out.w.Data, first_step, second_step);
             trash2 = decide_if_value_in_interval_is_more_than_input_value(out.y.Data, out.w.Data, second_step);
             
             if(sum(trash == 1) < sum(trash == 0))
                 Fit1(gen1,i) = 100000;
-            else
-                Fit1(gen1,i) = sum(abs(out.e.Data));
             end
             if(sum(trash2 == 1) < sum(trash2 == 0))
                 Fit1(gen1,i) = 100000;
-            else
-                Fit1(gen1,i) = sum(abs(out.e.Data));
             end
         catch
             Fit1(gen1,i) = 100000;

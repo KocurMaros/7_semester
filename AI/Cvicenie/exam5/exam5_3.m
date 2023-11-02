@@ -31,6 +31,9 @@ for gen=1:numgen
             out1=sim("exam3_3");
             % Fit(gen,i) = sum(abs(out.e.Data));
             Fit3(gen,i) = sum(abs(out1.e.Data)+a*abs(out1.de.Data)+b*abs(out1.u.Data)+c*abs(out1.du.Data)); 
+            % if(max(out1.y.Data)>max(out1.w.Data))
+            %     Fit3(gen,i) = 10000;
+            % end
         catch
             Fit3(gen,i) = 100000;
         end

@@ -1,6 +1,11 @@
 % Vypocet suradnic [x,y,z] zo vstupnych uhlov u1-u6
 
-function[c]=uhly2xyz(u1,u2,u3,u4,u5,u6)
+function[x,y,z]=uhly2xyz_moja(angles)
+u1 = angles(1);
+u2 = angles(2);
+u3 = angles(3);
+u4 = angles(4);
+u5 = angles(5);
 u6=0;
 
 
@@ -27,5 +32,8 @@ J=[1 0 0 0;0 cos(u6) -sin(u6) 0;0 sin(u6) cos(u6) 0;0 0 0 1];
 %K2= A*B*C*[0;0;R2;1];
 %K3= A*B*C*D*E*F*[R3;0;0;1];
 KB= A*B*C*D*E*F*G*H*I*J*[R6x;0;-R6z;1];
-c=[KB(1:3)];
+x = KB(1);
+y = KB(2);
+z = KB(3);
+% c=[KB(1:3)];
 
