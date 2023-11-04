@@ -23,8 +23,6 @@
 #include "usart.h"
 #include "gpio.h"
 
-#include <stdio.h>
-#include <stdlib.h>
 #include "../Drivers/HTS221/hts221.h"
 #include "../Drivers/LPS22HB/lps22hb.h"
 
