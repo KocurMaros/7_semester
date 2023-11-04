@@ -4,7 +4,7 @@
  *  Created on: Nov 4, 2023
  *      Author: laptop
  */
-#include "lps22hb.h"
+#include "lp22hb.h"
 
 static uint8_t slaveAddress = LPS22HB_I2C_ADDRESS_0;
 
