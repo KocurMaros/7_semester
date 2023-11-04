@@ -10,7 +10,7 @@
 float tx0, tx1, ty0, ty1;
 float hx0, hx1, hy0, hy1;
 
-uint8_t slaveAddress = HTS221_I2C_ADDRESS;
+static uint8_t slaveAddress = HTS221_I2C_ADDRESS;
 
 void hts221_write_bytes(uint8_t reg_address, uint8_t *data,uint8_t len){
 	masterWriteMultiByte(data,len, slaveAddress, reg_address);
@@ -33,9 +33,9 @@ uint8_t hts221_init(){
 	hy1 = data[0]/2;
 
 	hts221_read_bytes(HTS221_REG_H0_T0_OUT_L, &data, 2);
-	hx0 = data[1] | data[0] << 8;
+	hx0 = data[0] | data[1] << 8;
 	hts221_read_bytes(HTS221_REG_H1_T0_OUT_L, &data, 2);
-	hx1 = data[1] | data[0] << 8;
+	hx1 = data[0] | data[1] << 8;
 
 	hts221_read_bytes(HTS221_REG_T0_degC_x8, &data, 1);
 	ty0 = data[0]/8;
@@ -43,9 +43,9 @@ uint8_t hts221_init(){
 	ty1 = data[0]/8;
 
 	hts221_read_bytes(HTS221_REG_T0_OUT_L, &data, 2);
-	tx0 = data[1] | data[0] << 8;
+	tx0 = data[0] | data[1] << 8;
 	hts221_read_bytes(HTS221_REG_T1_OUT_L, &data, 2);
-	tx1 = data[1] | data[0] << 8;
+	tx1 = data[0] | data[1] << 8;
 	return 1;
 }
 float hts221_get_temperature(){
@@ -66,7 +66,3 @@ float hts221_get_humidity(){
 float linear_interpolation(uint16_t x,float x0,float x1,float y0,float y1){
 	return (y0 + (((float)x-x0)*(y1-y0))/(x1-x0));
 }
-
-
-
-

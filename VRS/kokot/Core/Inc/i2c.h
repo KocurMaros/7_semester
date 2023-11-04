@@ -37,7 +37,9 @@ extern "C" {
 /* USER CODE END Private defines */
 
 void MX_I2C1_Init(void);
-
+void masterReadMultiByte(uint8_t *data,uint8_t len, uint8_t slaveAddress, uint8_t registerAddress);
+void masterWriteMultiByte(uint8_t *data,uint8_t len, uint8_t slaveAddress, uint8_t registerAddress);
+void I2C_IRQHandler();
 /* USER CODE BEGIN Prototypes */
 
 /* USER CODE END Prototypes */

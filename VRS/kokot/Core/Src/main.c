@@ -23,6 +23,9 @@
 #include "usart.h"
 #include "gpio.h"
 
+#include "../Drivers/HTS221/hts221.h"
+#include "../Drivers/LPS22HB/lps22hb.h"
+
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 
@@ -97,11 +100,14 @@ int main(void)
   MX_I2C1_Init();
   /* USER CODE BEGIN 2 */
   uint8_t hts_work = hts221_init();
+  uint8_t lps_work = lps22hb_init(); 
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   float temp, hum;
+  float press, alt;
+
   uint8_t *buffer;
   int len;
   while (1)
@@ -114,8 +120,15 @@ int main(void)
 		  temp = 0;
 		  hum = 0;
 	  }
+    if(lps_work){
+      press = lps22hb_get_pressure();
+      alt = lps22hb_calculate_altitude(press);
+    }else{
+      press = 0;
+      alt = 0;
+    }
 	  buffer = malloc(32*sizeof(uint8_t));
-	  len = sprintf(buffer, "%f,%f\n",temp,hum);
+	  len = sprintf(buffer, "%2.1f,%2.0f,%4.2f,%3.2f\n",temp,hum,press,alt);
 	  USART2_PutBuffer(buffer, len);
 	  free(buffer);
     /* USER CODE END WHILE */
