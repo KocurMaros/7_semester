@@ -122,7 +122,8 @@ int main(void)
           temp = hts221_get_temperature();
           hum = hts221_get_humidity();
         }
-        if(press_sensor_ok){
+        if(press_sensor_ok)
+        {
           press = lps25hb_get_pressure();
           alt = lps25hb_calculate_altitude(press);
         }

@@ -1,0 +1,15 @@
+/*
+ * hts221.h
+ *
+ *  Created on: Nov 4, 2023
+ *      Author: laptop
+ */
+
+#ifndef DRIVERS_HTS221_HTS221_H_
+#define DRIVERS_HTS221_HTS221_H_
+
+
+
+
+
+#endif /* DRIVERS_HTS221_HTS221_H_ */

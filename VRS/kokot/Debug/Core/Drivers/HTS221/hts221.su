@@ -1,0 +1,6 @@
+../Core/Drivers/HTS221/hts221.c:15:6:hts221_write_bytes	16	static
+../Core/Drivers/HTS221/hts221.c:18:6:hts221_read_bytes	16	static
+../Core/Drivers/HTS221/hts221.c:22:9:hts221_init	16	static
+../Core/Drivers/HTS221/hts221.c:51:7:hts221_get_temperature	16	static
+../Core/Drivers/HTS221/hts221.c:59:7:hts221_get_humidity	16	static
+../Core/Drivers/HTS221/hts221.c:66:7:linear_interpolation	32	static

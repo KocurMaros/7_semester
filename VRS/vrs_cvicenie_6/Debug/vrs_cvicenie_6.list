@@ -1076,6 +1076,7 @@ uint8_t hts221_init()
  8000cc6:	f7ff ffd5 	bl	8000c74 <hts221_read_byte>
  8000cca:	4603      	mov	r3, r0
  8000ccc:	777b      	strb	r3, [r7, #29]
+
 	uint8_t t0_degC_x8_l = hts221_read_byte(HTS221_REG_T0_degC_x8);
  8000cce:	2032      	movs	r0, #50	; 0x32
  8000cd0:	f7ff ffd0 	bl	8000c74 <hts221_read_byte>
@@ -1091,6 +1092,7 @@ uint8_t hts221_init()
  8000ce4:	f7ff ffc6 	bl	8000c74 <hts221_read_byte>
  8000ce8:	4603      	mov	r3, r0
  8000cea:	76bb      	strb	r3, [r7, #26]
+
 	uint8_t h0_t0_out_l = hts221_read_byte(HTS221_REG_H0_T0_OUT_L);
  8000cec:	2036      	movs	r0, #54	; 0x36
  8000cee:	f7ff ffc1 	bl	8000c74 <hts221_read_byte>
@@ -1111,6 +1113,7 @@ uint8_t hts221_init()
  8000d0c:	f7ff ffb2 	bl	8000c74 <hts221_read_byte>
  8000d10:	4603      	mov	r3, r0
  8000d12:	75bb      	strb	r3, [r7, #22]
+
 	uint8_t t0_out_l = hts221_read_byte(HTS221_REG_T0_OUT_L);
  8000d14:	203c      	movs	r0, #60	; 0x3c
  8000d16:	f7ff ffad 	bl	8000c74 <hts221_read_byte>
@@ -1148,6 +1151,7 @@ uint8_t hts221_init()
  8000d52:	b21b      	sxth	r3, r3
  8000d54:	4313      	orrs	r3, r2
  8000d56:	81fb      	strh	r3, [r7, #14]
+
 	int16_t t0_degC_x8 = t0_degC_x8_l | ((t1_t0_msb & 0b11) << 8);
  8000d58:	7f3b      	ldrb	r3, [r7, #28]
  8000d5a:	b21a      	sxth	r2, r3

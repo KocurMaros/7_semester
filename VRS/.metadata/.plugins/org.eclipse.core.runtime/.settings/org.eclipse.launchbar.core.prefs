@@ -1,7 +1,7 @@
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/arch=x86_64
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/name=Local
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/os=linux
-configDescList=org.eclipse.launchbar.core.descriptorType.default\:cvicenie_2,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:vrs_cvicenie_6 Debug
+configDescList=org.eclipse.launchbar.core.descriptorType.default\:cvicenie_2,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:kokot Debug,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:vrs_cvicenie_6,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:i2c_comm.elf
 eclipse.preferences.version=1
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:cad_mouse_vrs\ Debug/activeLaunchMode=run
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:cad_mouse_vrs\ Debug/activeLaunchTarget=null\:---
@@ -11,6 +11,9 @@ org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:cv06\ Debug/activeLaunchTarget=
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:cv07\ Debug/activeLaunchMode=run
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:cvicenie_2\ Debug/activeLaunchMode=debug
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:cvicenie_2\ Debug/activeLaunchTarget=null\:---
+org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:i2c_comm.elf/activeLaunchMode=run
+org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:kokot\ Debug/activeLaunchMode=debug
+org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:kokot\ Debug/activeLaunchTarget=null\:---
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:usart_DMA.elf/activeLaunchTarget=null\:---
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:vrs_cv2_ll_programming\ (1)/activeLaunchMode=run
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:vrs_cv2_ll_programming.elf/activeLaunchMode=run
@@ -19,7 +22,7 @@ org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:vrs_cv2_ll_programming/activeLa
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:vrs_cv3_interrupts.elf/activeLaunchMode=run
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:vrs_cv3_interrupts.elf/activeLaunchTarget=null\:---
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:vrs_cvicenie_4\ Debug/activeLaunchMode=run
-org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:vrs_cvicenie_6\ Debug/activeLaunchMode=run
+org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:vrs_cvicenie_6\ Debug/activeLaunchMode=debug
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:vrs_cvicenie_6\ Debug/activeLaunchTarget=null\:---
 org.eclipse.launchbar.core.descriptorType.default\:cvicenie_2\ Debug\ (1)/activeLaunchTarget=org.eclipse.launchbar.core.launchTargetType.local\:Local
 org.eclipse.launchbar.core.descriptorType.default\:cvicenie_2/activeLaunchMode=debug

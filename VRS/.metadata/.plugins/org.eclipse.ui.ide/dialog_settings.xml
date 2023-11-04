@@ -7,6 +7,9 @@
 		<item key="WizardProjectsImportPage.STORE_CLOSE_CREATED_PROJECTS_ID" value="false"/>
 		<item key="WizardProjectsImportPage.STORE_HIDE_CONFLICTING_PROJECTS_ID" value="false"/>
 		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+			<item value="/home/laptop/Downloads/vrs_cvicenie_6"/>
+			<item value="/home/laptop/school/VRS/vrs_cvicenie_6"/>
+			<item value="/home/laptop/Downloads/7_semester/VRS/vrs_cvicenie_6"/>
 			<item value="/home/laptop/school/VRS_Mouse_App/cad_mouse_vrs"/>
 			<item value="/home/laptop/school/VRS/cad_mouse_vrs"/>
 			<item value="/home/laptop/school/VRS/cv07"/>
