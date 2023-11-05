@@ -144,7 +144,7 @@ void masterReadMultiByte(uint8_t *data,uint8_t len, uint8_t slaveAddress, uint8_
 		//End of transfer
 		LL_I2C_ClearFlag_STOP(I2C1);
 		LL_I2C_DisableIT_RX(I2C1);
-
+    I2C1->ICR |= (1 << 4);
 		LL_I2C_ClearFlag_NACK(I2C1);
 		ubReceiveIndex = 0;
 }

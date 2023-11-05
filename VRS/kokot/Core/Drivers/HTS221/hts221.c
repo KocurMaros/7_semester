@@ -25,44 +25,90 @@ uint8_t hts221_init(){
 	if(ID != HTS221_WHO_AM_I_VALUE){
 		return 0;
 	}
+	uint8_t h0_rh_x2 = hts221_read_byte(HTS221_REG_H0_rH_x2);
+	uint8_t h1_rh_x2 = hts221_read_byte(HTS221_REG_H1_rH_x2);
 
-	uint8_t data[2];
-	hts221_read_bytes(HTS221_REG_H0_rH_x2, &data, 1);
-	hy0 = data[0]/2;
-	hts221_read_bytes(HTS221_REG_H1_rH_x2, &data, 1);
-	hy1 = data[0]/2;
+	uint8_t t0_degC_x8_l = hts221_read_byte(HTS221_REG_T0_degC_x8);
+	uint8_t t1_degC_x8_l = hts221_read_byte(HTS221_REG_T1_degC_x8);
+	uint8_t t1_t0_msb = hts221_read_byte(HTS221_REG_T1_T0_MSB);
 
-	hts221_read_bytes(HTS221_REG_H0_T0_OUT_L, &data, 2);
-	hx0 = data[0] | data[1] << 8;
-	hts221_read_bytes(HTS221_REG_H1_T0_OUT_L, &data, 2);
-	hx1 = data[0] | data[1] << 8;
+	uint8_t h0_t0_out_l = hts221_read_byte(HTS221_REG_H0_T0_OUT_L);
+	uint8_t h0_t0_out_h = hts221_read_byte(HTS221_REG_H0_T0_OUT_H);
+	uint8_t h1_t0_out_l = hts221_read_byte(HTS221_REG_H1_T0_OUT_L);
+	uint8_t h1_t0_out_h = hts221_read_byte(HTS221_REG_H1_T0_OUT_H);
 
-	hts221_read_bytes(HTS221_REG_T0_degC_x8, &data, 1);
-	ty0 = data[0]/8;
-	hts221_read_bytes(HTS221_REG_T1_degC_x8, &data, 1);
-	ty1 = data[0]/8;
+	uint8_t t0_out_l = hts221_read_byte(HTS221_REG_T0_OUT_L);
+	uint8_t t0_out_h = hts221_read_byte(HTS221_REG_T0_OUT_H);
+	uint8_t t1_out_l = hts221_read_byte(HTS221_REG_T1_OUT_L);
+	uint8_t t1_out_h = hts221_read_byte(HTS221_REG_T1_OUT_H);
 
-	hts221_read_bytes(HTS221_REG_T0_OUT_L, &data, 2);
-	tx0 = data[0] | data[1] << 8;
-	hts221_read_bytes(HTS221_REG_T1_OUT_L, &data, 2);
-	tx1 = data[0] | data[1] << 8;
+	int16_t t0_out = t0_out_l | (t0_out_h << 8);
+	int16_t t1_out = t1_out_l | (t1_out_h << 8);
+
+	int16_t t0_degC_x8 = t0_degC_x8_l | ((t1_t0_msb & 0b11) << 8);
+	int16_t t1_degC_x8 = t1_degC_x8_l | ((t1_t0_msb & 0b1100) << (8 - 2));
+
+	tx0 = (float)t0_out;
+	tx1 = (float)t1_out;
+	ty0 = (float)t0_degC_x8/8.0;
+	ty1 = (float)t1_degC_x8/8.0;
+
+	int16_t h0_t0_out = h0_t0_out_l | (h0_t0_out_h << 8);
+	int16_t h1_t0_out = h1_t0_out_l | (h1_t0_out_h << 8);
+
+	hx0 = (float)h0_t0_out;
+	hx1 = (float)h1_t0_out;
+	hy0 = (float)h0_rh_x2/2.0;
+	hy1 = (float)h1_rh_x2/2.0;
+
+
+	// set up sensor registers
+	uint8_t ctrl_reg1 = 0b10000011;
+	hts221_write_byte(HTS221_REG_CTRL_REG1, &ctrl_reg1,1);
+	// uint8_t data[2];
+	// hts221_read_bytes(HTS221_REG_H0_rH_x2, &data, 1);
+	// hy0 = (float)(data[0])/2;
+	// hts221_read_bytes(HTS221_REG_H1_rH_x2, &data, 1);
+	// hy1 = (float)(data[0])/2;
+
+	// hts221_read_bytes(HTS221_REG_H0_T0_OUT_L, &data, 2);
+	// hx0 = (float)(data[0] | (data[1] << 8));
+	// hts221_read_bytes(HTS221_REG_H1_T0_OUT_L, &data, 2);
+	// hx1 = (float)(data[0] | (data[1] << 8));
+
+	// uint8_t t1_t0_msb;
+	// hts221_read_bytes(HTS221_REG_T1_T0_MSB, &t1_t0_msb, 1);
+
+	// hts221_read_bytes(HTS221_REG_T0_degC_x8, &data, 1);
+	// ty0 = (float)(data[0] | ((t1_t0_msb & 0b11) << 8))/8;
+	// hts221_read_bytes(HTS221_REG_T1_degC_x8, &data, 1);
+	// ty1 = (float)(data[0] | ((t1_t0_msb & 0b1100) << (8 - 2)))/8;
+
+	// hts221_read_bytes(HTS221_REG_T0_OUT_L, &data, 2);
+	// tx0 = (float)(data[0] | (data[1] << 8));
+	// hts221_read_bytes(HTS221_REG_T1_OUT_L, &data, 2);
+	// tx1 = (float)(data[0] | (data[1] << 8));
+
+	// uint8_t ctrl_reg1 = 0b10000011;
+	// hts221_write_bytes(HTS221_REG_CTRL_REG1, &ctrl_reg1,1);
+
 	return 1;
 }
 float hts221_get_temperature(){
 	uint8_t data[2];
 	uint16_t x;
 	hts221_read_bytes(HTS221_REG_TEMP_OUT_L, &data, 2);
-	x = data[1] | data[0]<<8;
-	return linear_interpolation(x, tx0, tx1, ty0, ty1);
+	x = data[0] | data[1]<<8;
+	return linear_interpolation((float)x, tx0, tx1, ty0, ty1);
 }
 
 float hts221_get_humidity(){
 	uint8_t data[2];
 	uint16_t x;
 	hts221_read_bytes(HTS221_REG_HUMIDITY_OUT_L, &data, 2);
-	x = data[1] | data[0]<<8;
-	return linear_interpolation(x, hx0, hx1, hy0, hy1);
+	x = data[0] | data[1]<<8;
+	return linear_interpolation((float)x, hx0, hx1, hy0, hy1);
 }
-float linear_interpolation(uint16_t x,float x0,float x1,float y0,float y1){
-	return (y0 + (((float)x-x0)*(y1-y0))/(x1-x0));
+float linear_interpolation(float x,float x0,float x1,float y0,float y1){
+	return (y0 + ((x-x0)*(y1-y0))/(x1-x0));
 }

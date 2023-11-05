@@ -114,7 +114,6 @@ int main(void)
   int len;
   while (1)
   {
-
 	  if(hts_work){
 		  temp = hts221_get_temperature();
 		  hum = hts221_get_humidity();
