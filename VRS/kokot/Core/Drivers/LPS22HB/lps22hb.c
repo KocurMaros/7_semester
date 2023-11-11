@@ -12,6 +12,8 @@ void lps22hb_write_bytes(uint8_t *data, uint8_t reg_address, uint8_t len){
     masterWriteMultiByte(data, len, slaveAddress, reg_address);
 }
 void lps22hb_read_bytes(uint8_t *data, uint8_t reg_address, uint8_t len){
+	if(len > 1)
+		reg_address |= (1<<7);
     masterReadMultiByte(data, len, slaveAddress, reg_address);
 }
 

@@ -35,7 +35,8 @@ Core/Drivers/HTS221/hts221.o: ../Core/Drivers/HTS221/hts221.c \
  ../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_ll_pwr.h \
  ../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_ll_dma.h \
  ../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_ll_usart.h \
- ../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_ll_gpio.h
+ ../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_ll_gpio.h \
+ ../Core/Inc/usart.h
 ../Core/Drivers/HTS221/hts221.h:
 ../Core/Inc/i2c.h:
 ../Core/Inc/main.h:
@@ -75,3 +76,4 @@ Core/Drivers/HTS221/hts221.o: ../Core/Drivers/HTS221/hts221.c \
 ../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_ll_dma.h:
 ../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_ll_usart.h:
 ../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_ll_gpio.h:
+../Core/Inc/usart.h:

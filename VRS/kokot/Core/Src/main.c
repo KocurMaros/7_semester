@@ -132,6 +132,10 @@ int main(void)
 	  len = sprintf(buffer, "%2.1f,%2.0f,%4.2f,%3.2f\n",temp,hum,press,alt);
 	  USART2_PutBuffer(buffer, len);
 	  free(buffer);
+	  char message[120] = {0};
+	  	int len = sprintf(message, "%5.2f,%5.2f,%5.2f,%5.2f,%5.2f,%5.2f,%5.2f,%5.2f\n", tx0, tx1, ty0, ty1, hx0, hx1, hy0, hy1);
+	  	USART2_PutBuffer(message, len);
+	  	LL_mDelay(1000);
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */

@@ -1,5 +1,4 @@
-function [Theta_hat,G,Q] = REFIL(Theta_hat,G,H,Q,Z,y,n,i)
-    z=Z(i,:)';
+function [Theta_hat,G,Q] = REFIL(Theta_hat,G,Q,z,n,i)
     f=G*z;
     s2=zeros(n+2,1);
     s2(1)=1;

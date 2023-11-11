@@ -1,5 +1,5 @@
 ../Core/Drivers/LPS22HB/lps22hb.c:11:6:lps22hb_write_bytes	16	static
 ../Core/Drivers/LPS22HB/lps22hb.c:14:6:lps22hb_read_bytes	16	static
-../Core/Drivers/LPS22HB/lps22hb.c:18:9:lps22hb_init	16	static
-../Core/Drivers/LPS22HB/lps22hb.c:32:7:lps22hb_get_pressure	16	static
-../Core/Drivers/LPS22HB/lps22hb.c:37:7:lps22hb_calculate_altitude	16	static
+../Core/Drivers/LPS22HB/lps22hb.c:20:9:lps22hb_init	16	static
+../Core/Drivers/LPS22HB/lps22hb.c:34:7:lps22hb_get_pressure	16	static
+../Core/Drivers/LPS22HB/lps22hb.c:39:7:lps22hb_calculate_altitude	16	static

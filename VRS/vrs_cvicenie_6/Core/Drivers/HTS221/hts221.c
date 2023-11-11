@@ -6,7 +6,8 @@
  */
 
 #include "hts221.h"
-
+#include "i2c.h"
+#include "usart.h"
 
 static uint8_t address = HTS221_I2C_ADDRESS;
 static float tx0, tx1, ty0, ty1; // temperature calibration data
@@ -72,7 +73,10 @@ uint8_t hts221_init()
 	hx1 = (float)h1_t0_out;
 	hy0 = (float)h0_rh_x2/2.0;
 	hy1 = (float)h1_rh_x2/2.0;
-
+	char message[120] = {0};
+	int len = sprintf(message, "%5.2f,%5.2f,%5.2f,%5.2f,%5.2f,%5.2f,%5.2f,%5.2f\n", tx0, tx1, ty0, ty1, hx0, hx1, hy0, hy1);
+	USART2_PutBuffer(message, len);
+	LL_mDelay(1000);
 
 	// set up sensor registers
 	uint8_t ctrl_reg1 = 0b10000011;
