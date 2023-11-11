@@ -3,7 +3,7 @@ clc
 close all
 tic
 
-lpop = 35;
+lpop = 40;
 numgen=5000;
 num_points = 6;
 joints = 6;
@@ -23,7 +23,7 @@ P2=[0.8; 0;1];
 P3=[0; 0.5; 1];
 P4=[-0.75;0.5; 0];
 Points = [P0,P1,P2,P3,P4,P0];
-alfa = 0.1;
+alfa = 0.05;
 end_points = zeros(3,6);
 graph = zeros(3,6);
 evol_sn = zeros(1,numgen);
@@ -46,16 +46,16 @@ for gen=1:numgen
                 error_angle = error_angle + abs(Pop(i,step_angles(j)+g) - Pop(i,step_angles(j+1)+g));
            end
        end
-       evol_pp(gen) = PP;
-       evol_sn(gen) = error_angle;
+       
        Fit(i) = PP + alfa*error_angle;
     end
-
+    evol_pp(gen) = PP;
+     evol_sn(gen) = error_angle;
     evolutions(gen)=min(Fit);	% convergence graph of the solution
     % GA
     Best=selbest(Pop,Fit,[1,1]);
     Old=selrand(Pop,Fit,5);
-    Work1 = selsus(Pop,Fit,11);
+    Work1 = selsus(Pop,Fit,16);
     Work2 = selsus(Pop,Fit,17);
     Work1=crossov(Work1,1,0);
     Work2=mutx(Work2,0.1,Space);
@@ -72,4 +72,5 @@ figure(2)
 plot(evol_pp)
 figure(3)
 plot(evol_sn)
+min(evol_pp)
 toc
