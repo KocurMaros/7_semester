@@ -29,7 +29,8 @@ graph = zeros(3,6);
 evol_sn = zeros(1,numgen);
 evol_pp = zeros(1,numgen);
 step_angles = 0:6:35;
-
+pp_all = zeros(1,lpop);
+sn_all = zeros(1,lpop);
 for gen=1:numgen
     for i=1:lpop
         PP = 0;
@@ -39,19 +40,22 @@ for gen=1:numgen
             offset = (j-1)*6+1;
             [x,y,z] = uhly2xyz_moja(Pop(i,offset:offset+5));
             PP = PP + sqrt((Points(1,j)-x)^2+(Points(2,j)-y)^2+(Points(3,j)-z)^2);
-            SN = SN + abs(sum(Pop(i,offset:offset+5)));
+            % SN = SN + abs(sum(Pop(i,offset:offset+5)));
        end
        for j = 1:num_points-1
            for g = 1:num_points
                 error_angle = error_angle + abs(Pop(i,step_angles(j)+g) - Pop(i,step_angles(j+1)+g));
            end
        end
-       
+       pp_all(i) = PP;
+       sn_all(i) = error_angle;
        Fit(i) = PP + alfa*error_angle;
     end
-    evol_pp(gen) = PP;
-     evol_sn(gen) = error_angle;
+
+    evol_pp(gen) = min(pp_all);
+    evol_sn(gen) = min(sn_all);
     evolutions(gen)=min(Fit);	% convergence graph of the solution
+    
     % GA
     Best=selbest(Pop,Fit,[1,1]);
     Old=selrand(Pop,Fit,5);
