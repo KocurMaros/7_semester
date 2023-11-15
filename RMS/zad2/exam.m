@@ -12,4 +12,8 @@ T_vz = 0.001;
 i = 5;
 K_e = 0.01;
 B_e = 0.001;
-out = sim("simulation.slx");
+P = 8.5335;
+I = 61.4355;
+out = sim("simulation2023a.slx");
+grafs
+% bud signal alebo sinus
