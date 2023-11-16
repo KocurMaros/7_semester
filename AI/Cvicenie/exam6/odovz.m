@@ -7,14 +7,26 @@ load("odovzdanie4.mat")
 plot3(Points(1,:),Points(2,:),Points(3,:),'o')
 hold on
 plot3(BEST.x,BEST.y,BEST.z,'x')
+xlabel("x");
+ylabel("y");
+zlabel("z");
 u_ind = find(evolutions == 0);
 u_index = min(u_ind);
 figure(2)
 plot(evolutions(1:u_index-1));
+hold on 
+xlabel("gen");
+ylabel("fitness");
 figure(3)
 plot(evol_pp(1:u_index-1));
+hold on 
+xlabel("gen");
+ylabel("PP");
 figure(4)
 plot(evol_sn(1:u_index-1));
+hold on 
+xlabel("gen");
+ylabel("SN");
 
 disp("best")
 disp("PP")
@@ -27,7 +39,7 @@ for i = 1:6
     disp(BEST.joints(offset+0)+" "+BEST.joints(offset+1)+" "+BEST.joints(offset+2)+" "+BEST.joints(offset+3)+" "+BEST.joints(offset+4)+" "+BEST.joints(offset+5))
 end
 % disp(BEST.joints)
-disp("coord of points")
+disp("coord of pointshelp narxnet")
 disp(BEST.x)
 disp(BEST.y)
 disp(BEST.z)
