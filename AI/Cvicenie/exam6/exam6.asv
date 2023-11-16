@@ -31,9 +31,9 @@ evol_pp = zeros(1,numgen);
 step_angles = 0:6:35;
 pp_all = zeros(1,lpop);
 sn_all = zeros(1,lpop);
-BEST.PP_best = 100000;
-BEST.SN_best = 100000;
-coords = zeros(3,num_points);
+PP_best = 100000;
+SN_best = 100000;
+
 for gen=1:numgen
     for i=1:lpop
         PP = 0;
@@ -44,22 +44,15 @@ for gen=1:numgen
             [x,y,z] = uhly2xyz_moja(Pop(i,offset:offset+5));
             PP = PP + sqrt((Points(1,j)-x)^2+(Points(2,j)-y)^2+(Points(3,j)-z)^2);
             % SN = SN + abs(sum(Pop(i,offset:offset+5)));
-            coords(1,j) = x;
-            coords(2,j) = y;
-            coords(3,j) = z;
        end
        for j = 1:num_points-1
            for g = 1:num_points
                 error_angle = error_angle + abs(Pop(i,step_angles(j)+g) - Pop(i,step_angles(j+1)+g));
            end
        end
-       if(PP < BEST.PP_best)
-            BEST.PP_best = PP;
-            BEST.SN_best = error_angle;
-            BEST.x = coords(1,:);
-            BEST.y = coords(2,:);
-            BEST.z = coords(3,:);
-            BEST.joints = Pop(i,:);
+       if(PP < PP_best)
+            PP_best = PP;
+            SN_best = SN;
        end
        pp_all(i) = PP;
        sn_all(i) = error_angle;
@@ -79,9 +72,6 @@ for gen=1:numgen
     Work2=mutx(Work2,0.1,Space);
     Work2=muta(Work2,0.15,Delta,Space);
     Pop=[Best;Old;Work1;Work2];
-    if(PP < 0.008 && error_angle < 28)
-        break;
-    end
 end
  % Best solution
 figure(1);
