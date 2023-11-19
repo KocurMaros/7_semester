@@ -22,8 +22,9 @@
 #define LPS25HB_REG_PRESS_OUT_L 0x29
 #define LPS25HB_REG_PRESS_OUT_H 0x2A
 
-
-
+#define TLV493_MOD1         0x1
+#define TLV493_MOD2         0x3
+#define TLV493D_B_MULT 		0.098
 void lps25hb_write_byte(uint8_t reg_address, uint8_t* data,uint8_t len);
 void lps25hb_read_bytes(uint8_t *data, uint8_t reg_address,uint8_t len);
 

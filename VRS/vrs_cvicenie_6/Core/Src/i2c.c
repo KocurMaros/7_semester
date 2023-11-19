@@ -59,7 +59,7 @@ void MX_I2C1_Init(void)
   NVIC_EnableIRQ(I2C1_EV_IRQn);
 
   /* USER CODE BEGIN I2C1_Init 1 */
-  // GPIOB->ODR |= (0b11 << 6);
+  GPIOB->ODR |= (0b11 << 6);
   /* USER CODE END I2C1_Init 1 */
   /** I2C Initialization
   */
@@ -96,6 +96,7 @@ void i2c_master_write(uint8_t *data, uint8_t register_addr, uint8_t slave_addr,u
 			if(LL_I2C_IsActiveFlag_TXIS(I2C1))
 			{
 				LL_I2C_TransmitData8(I2C1, data[i]);
+				break;
 			}
 		}
 	}

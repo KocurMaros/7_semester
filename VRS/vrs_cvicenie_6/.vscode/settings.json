@@ -1,6 +1,7 @@
 {
     "files.associations": {
         "i2c.h": "c",
-        "lps25hb.h": "c"
+        "lps25hb.h": "c",
+        "stm32f3xx_hal_def.h": "c"
     }
 }

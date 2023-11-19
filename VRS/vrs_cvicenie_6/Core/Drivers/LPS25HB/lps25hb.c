@@ -6,8 +6,8 @@
  */
 #include "lps25hb.h"
 #include "math.h"
-
-static uint8_t address = LPS25HB_I2C_ADDRESS_1;
+#include "usart.h"
+static uint8_t address = 0x5E << 1;
 
 void lps25hb_write_byte(uint8_t reg_address, uint8_t *data,uint8_t len)
 {
@@ -23,33 +23,32 @@ void lps25hb_read_bytes(uint8_t *data, uint8_t reg_address,uint8_t len)
 uint8_t lps25hb_init()
 {
 	// verify WHO_AM_I
-	uint8_t id;
-	lps25hb_read_bytes(&id,LPS25HB_REG_WHO_AM_I_ADDR,1);
-	if(id != LPS25HB_WHO_AM_I_VALUE)
-	{
-		// try another address
-		address = LPS25HB_I2C_ADDRESS_0;
-		lps25hb_read_bytes(&id,LPS25HB_REG_WHO_AM_I_ADDR,1);
-		if(id != LPS25HB_WHO_AM_I_VALUE)
-		{
-			return 0;
-		}
-	}
 
 	// set up sensor registers
-	uint8_t ctrl_reg1 = 0b00110000; 
-	lps25hb_write_byte(LPS25HB_REG_CTRL_REG1, &ctrl_reg1,1);
+	uint8_t mod2 = 0b11100000;
 
+	uint8_t mod1;
+	lps25hb_read_bytes(&mod1,0x7,1);
+	mod1 = mod1 | 0x0 << 2;
+	mod1 = mod1 | 1<<1;
+	mod1 = mod1 & ~(0b0);
+	lps25hb_write_byte(TLV493_MOD1, &mod1,1);
+	lps25hb_write_byte(TLV493_MOD2, &mod2,1);
 	return 1;
 }
 
-float lps25hb_get_pressure()
+float lps25hb_get_pressure(float *coord)
 {
-	uint8_t press_data[3];
-	lps25hb_read_bytes(&press_data,LPS25HB_REG_PRESS_OUT_XL,3);
-	uint32_t pressure = press_data[2] << 16 | press_data[1] << 8 | press_data[0];;
+	uint8_t data[6];
+	lps25hb_read_bytes(&data,0x0,6);
+	uint16_t x = (uint16_t)((data[0] << 8)) | (data[4] >> 4);
+    uint16_t y = (uint16_t)(data[1] << 8 | (data[4] & 0b1111) << 8);
+    uint16_t z = (uint16_t)(data[2] << 8) | (data[5] & 0b1111);
+    coord[0] = (float)x*TLV493D_B_MULT;
+    coord[1] = (float)y*TLV493D_B_MULT;
+    coord[2] = (float)z*TLV493D_B_MULT;
 
-	return ((float)pressure)/4096.0;
+	return 0;
 }
 
 float lps25hb_calculate_altitude(float pressure)

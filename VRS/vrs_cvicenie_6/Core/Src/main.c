@@ -106,36 +106,45 @@ int main(void)
   /* USER CODE BEGIN WHILE */
   uint8_t press_sensor_ok =0, temp_sensor_ok=0;
 //  uint8_t press_sensor_ok = 0;
-  temp_sensor_ok = hts221_init();
+//  temp_sensor_ok = hts221_init();
   press_sensor_ok = lps25hb_init();
 
+//  uint8_t *str;
+//  int len;
+//  float temp = 0, hum = 0, press = 0, alt = 0;
+//  str = malloc(32*sizeof(uint8_t));
   uint8_t *str;
   int len;
-  float temp = 0, hum = 0, press = 0, alt = 0;
-  str = malloc(32*sizeof(uint8_t));
+  float data[3];
   while (1)
   {
     /* USER CODE END WHILE */
 
-        if(temp_sensor_ok)
-        {
-          temp = hts221_get_temperature();
-          hum = hts221_get_humidity();
-        }
+//        if(temp_sensor_ok)
+//        {
+//          temp = hts221_get_temperature();
+//          hum = hts221_get_humidity();
+//        }
         if(press_sensor_ok)
         {
-          press = lps25hb_get_pressure();
-          alt = lps25hb_calculate_altitude(press);
+          lps25hb_get_pressure(&data);
+          LL_mDelay(50);
+//          alt = lps25hb_calculate_altitude(press);
         }
-        if(temp > 99.9) temp = 99.9;
-        if(temp < -99.9) temp = -99.9;
-        if(hum > 99) hum = 99;
-        if(hum < 0) hum = 0;
-        if(press > 9999.99) press = 9999.99;
-        if(press < -9999.99) press = -9999.99;
 
-        len = sprintf(str, "%2.1f,%2.0f,%4.2f,%3.2f\n", temp,hum,press,alt);
-        USART2_PutBuffer(str,len);
+		str = malloc(64*sizeof(uint8_t));
+		len = sprintf(str, "%f,%f,%f\n", data[0],data[1],data[2]);
+		USART2_PutBuffer(str,len);
+		free(str);
+//        if(temp > 99.9) temp = 99.9;
+//        if(temp < -99.9) temp = -99.9;
+//        if(hum > 99) hum = 99;
+//        if(hum < 0) hum = 0;
+//        if(press > 9999.99) press = 9999.99;
+//        if(press < -9999.99) press = -9999.99;
+//
+//        len = sprintf(str, "%2.1f,%2.0f,%4.2f,%3.2f\n", temp,hum,press,alt);
+//        USART2_PutBuffer(str,len);
 //        free(str);
     /* USER CODE BEGIN 3 */
   }

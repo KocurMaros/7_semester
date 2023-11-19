@@ -1,5 +1,5 @@
 ../Core/Drivers/LPS25HB/lps25hb.c:12:6:lps25hb_write_byte	1
 ../Core/Drivers/LPS25HB/lps25hb.c:18:6:lps25hb_read_bytes	1
-../Core/Drivers/LPS25HB/lps25hb.c:23:9:lps25hb_init	3
-../Core/Drivers/LPS25HB/lps25hb.c:46:7:lps25hb_get_pressure	1
-../Core/Drivers/LPS25HB/lps25hb.c:55:7:lps25hb_calculate_altitude	1
+../Core/Drivers/LPS25HB/lps25hb.c:23:9:lps25hb_init	1
+../Core/Drivers/LPS25HB/lps25hb.c:40:7:lps25hb_get_pressure	1
+../Core/Drivers/LPS25HB/lps25hb.c:54:7:lps25hb_calculate_altitude	1
