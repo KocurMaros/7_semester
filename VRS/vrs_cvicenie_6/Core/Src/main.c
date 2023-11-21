@@ -30,6 +30,7 @@
 
 #include "../Drivers/LPS25HB/lps25hb.h"
 #include "../Drivers/HTS221/hts221.h"
+#include "../Drivers/tlv493c/tlv493.h"
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 
@@ -127,15 +128,16 @@ int main(void)
 //        }
         if(press_sensor_ok)
         {
-          lps25hb_get_pressure(&data);
+//          tlv493_test();
+           lps25hb_get_pressure(&data);
           LL_mDelay(50);
 //          alt = lps25hb_calculate_altitude(press);
         }
 
-		str = malloc(64*sizeof(uint8_t));
-		len = sprintf(str, "%f,%f,%f\n", data[0],data[1],data[2]);
-		USART2_PutBuffer(str,len);
-		free(str);
+		 str = malloc(64*sizeof(uint8_t));
+		 len = sprintf(str, "%f,%f,%f\n", data[0],data[1],data[2]);
+		 USART2_PutBuffer(str,len);
+		 free(str);
 //        if(temp > 99.9) temp = 99.9;
 //        if(temp < -99.9) temp = -99.9;
 //        if(hum > 99) hum = 99;

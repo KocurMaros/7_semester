@@ -24,6 +24,7 @@ C_DEPS :=
 SUBDIRS := \
 Core/Drivers/HTS221 \
 Core/Drivers/LPS25HB \
+Core/Drivers/tlv493c \
 Core/Src \
 Core/Startup \
 Drivers/STM32F3xx_HAL_Driver/Src \

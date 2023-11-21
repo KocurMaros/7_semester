@@ -19,7 +19,7 @@ numTrain = floor(trainPercentage * numTimeSteps);
 
 net = narxnet(1:2,1:2,10);
 
-[X,Xi,Ai,T] = preparets(net,x1,{},y1);
+[X,Xi,Ai,T] = preparets(net,x1,{},t);
 
 Xtrain = X(:,1:numTrain);
 Xtest = X(:,numTrain+1:end);
@@ -28,18 +28,13 @@ Ttest = T(:,numTrain+1:end);
 
 net = train(net,X,T,Xi,Ai);
 Y_out = net(Xtest,Xi,Ai);
-% 
-% X_out = Xtest(1,:);
-% X_arr = cell2mat(X_out);
-% Y_arr = cell2mat(Y_out);
-% plot(X_arr,Y_arr, 'b'); hold on; plot(x1,y1, 'r');
 
-netc = closeloop(net);
-[Xc,Xic,Aic,Tc] = preparets(netc,x1,{},y1);
-Yc = netc(Xc,Xic,Aic);
+X_out = Xtest(1,:);
+for i =3999
+    plot(X_out(i),)
+end
+plot(Y_out, 'b'); hold on; plot(y1(numTrain+1:end), 'r');
 
-gensim(net)
-gensim(netc)
 % 
 % view(net)
 % Y = net(X,Xi,Ai)

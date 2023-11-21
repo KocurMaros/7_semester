@@ -38,7 +38,8 @@ Core/Src/main.o: ../Core/Src/main.c ../Core/Inc/main.h \
  ../Core/Inc/dma.h ../Core/Inc/main.h ../Core/Inc/i2c.h \
  ../Core/Inc/usart.h ../Core/Inc/gpio.h ../Core/Inc/stm32f3xx_it.h \
  ../Core/Src/../Drivers/LPS25HB/lps25hb.h \
- ../Core/Src/../Drivers/HTS221/hts221.h
+ ../Core/Src/../Drivers/HTS221/hts221.h \
+ ../Core/Src/../Drivers/tlv493c/tlv493.h
 ../Core/Inc/main.h:
 ../Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal.h:
 ../Core/Inc/stm32f3xx_hal_conf.h:
@@ -84,3 +85,4 @@ Core/Src/main.o: ../Core/Src/main.c ../Core/Inc/main.h \
 ../Core/Inc/stm32f3xx_it.h:
 ../Core/Src/../Drivers/LPS25HB/lps25hb.h:
 ../Core/Src/../Drivers/HTS221/hts221.h:
+../Core/Src/../Drivers/tlv493c/tlv493.h:
