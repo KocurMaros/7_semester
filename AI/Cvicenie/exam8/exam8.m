@@ -1,9 +1,11 @@
 clc
 clear 
 close all
+tf2.Numerator = [2.423 0.0069519];
+tf2.Denominator = [1 4.7439 28.489 0.026838];
 
-sim_time = 2500;
-sim_step = 0.1;
+sim_time = 250;
+sim_step = 0.01;
 
 u = 33.6;
 
@@ -13,53 +15,56 @@ out = sim("exam8_sim.slx");
 x_train = num2cell((out.w.Data)');
 y_train = num2cell((out.y.Data)');
 
-x_test = num2cell((out.w1.Data)');
-y_test = num2cell((out.y1.Data)');
-% t = num2cell((out.w.Time)');
-% trainPercentage = 0.8; 
-% numTimeSteps = numel(x1);
-% numTrain = floor(trainPercentage * numTimeSteps);
-% Xtrain = x_train(:,1:numTrain);
-% Xtest = x_train(:,numTrain+1:end);
-% Ytrain = y_train(:,1:numTrain);
-% Ytest = y_train(:,numTrain+1:end);
+% x_test = num2cell((out.w1.Data)');
+% y_test = num2cell((out.y1.Data)');
+
+trainPercentage = 0.8; 
+numTimeSteps = numel(x_train);
+numTrain = floor(trainPercentage * numTimeSteps);
+Xtrain = x_train(:,1:numTrain);
+Xtest = x_train(:,numTrain+1:end);
+Ytrain = y_train(:,1:numTrain);
 
 net = narxnet(1:2,1:2,10);
 net.divideFcn = 'dividetrain';
-net.divideParam.testRatio = 0.0;
-net.divideParam.trainRatio = 0.7;
-net.divideParam.valRatio = 0.3;
-net.trainParam.epochs = 500;
 
-[X,Xi,Ai,T] = preparets(net,x_train,{},y_train);
+[X,Xi,Ai,T] = preparets(net,Xtrain,{},Ytrain);
 net = train(net,X,T,Xi,Ai);
-Y_net_train = net(x_test,Xi,Ai);
-% Y_net_test = net(x_test,Xi,Ai);
+[Y, Xf, Af] = net(X,Xi,Ai);
+
+perf = perform(net,T,Y);
+
+
+y_plot = cell2mat(Y);
+figure(1)
+hold on
+plot(out.y.Data,'b')
+plot(y_plot,'r');
+
+%%%%%%%%%%close loop
+x_train = num2cell((out.w1.Data)');
+y_train = num2cell((out.y1.Data)');
+
+trainPercentage = 0.8; 
+numTimeSteps = numel(x_train);
+numTrain = floor(trainPercentage * numTimeSteps);
+Xtrain = x_train(:,1:numTrain);
+Xtest = x_train(:,numTrain+1:end);
+Ytrain = y_train(:,1:numTrain);
 
 netc = closeloop(net);
 
-[Xc,Xic,Aic,Tc] = preparets(netc,x_train,{},y_train);
-Y_netc_test = netc(Xc,Xic,Aic);
-% Y_netc_test = net(x_test,Xic,Aic);
+[Xc,Xic,Aic,Tc] = preparets(netc,Xtrain,{},Ytrain);
+Yc = netc(Xtest,Xic,Aic);
+y_plotcc = cell2mat(Yc);
 
-gensim(net)
-gensim(netc)
+figure(2)
+hold on
+vstupne =out.y1.Data;
+offsetnute = vstupne(20000:end);
+plot(offsetnute,'b');
+plot(y_plotcc,'g');
 
 
-% [X,Xi,Ai,T] = preparets(net,x1,{},y1);
-% X_out = Xtest(1,:);
-% X_arr = cell2mat(X_out);
-% Y_arr = cell2mat(Y_out);
-% plot(X_arr,Y_arr, 'b'); hold on; plot(x1,y1, 'r');
-
-% 
-% view(net)
-% Y = net(X,Xi,Ai)
-% perf = perform(net,Y,T)
-% 
-% netc = closeloop(net);
-% view(netc)
-% [Xc,Xic,Aic,Tc] = preparets(netc,x1,{},t);
-% Yc = netc(Xc,Xic,Aic);
-% 
-% gensim(net)
+% gensim(net,sim_step)
+% gensim(netc,sim_step)
