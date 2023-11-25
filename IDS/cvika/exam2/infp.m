@@ -1,4 +1,4 @@
-function [t_infl,tngt] = infp(y,t)
+function [t_infl,tngt,Tus,Tn] = infp(y,t)
     d1y = gradient(y,t);                 % Numerical Derivative
     d2y = gradient(d1y,t);               % Numerical Second Derivative
     t_infl = interp1(d1y, t, max(d1y));  % Find ‘t’ At Maximum Of First Derivative
@@ -7,9 +7,6 @@ function [t_infl,tngt] = infp(y,t)
     intcpt = y_infl - slope*t_infl;      % Calculate Intercept
     tngt = slope*t + intcpt;             % Calculate Tangent Line
     
-    
-    plot(t,y)
-    hold on 
-    plot(t_infl,y_infl,'xm')
-    plot(t,tngt)
+    Tus = -intcpt/slope;
+    Tn = (y(end) - intcpt)/slope - Tus;
 end
