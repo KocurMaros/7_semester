@@ -28,7 +28,7 @@ uint8_t lps25hb_init()
 	uint8_t mod2 = 0b11100000;
 
 	uint8_t mod1;
-	lps25hb_read_bytes(&mod1,0x7,1);
+	// lps25hb_read_bytes(&mod1,0x7,1);
 	mod1 = mod1 | 0x0 << 2;
 	mod1 = mod1 | 1<<1;
 	mod1 = mod1 & ~(0b0);
