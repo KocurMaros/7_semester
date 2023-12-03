@@ -1,0 +1,43 @@
+[System]
+Name='fuzreg01test'
+Type='mamdani'
+Version=2.0
+NumInputs=2
+NumOutputs=1
+NumRules=3
+AndMethod='min'
+OrMethod='max'
+ImpMethod='min'
+AggMethod='max'
+DefuzzMethod='mom'
+
+[Input1]
+Name='vyska_hladiny'
+Range=[-2 2]
+NumMFs=5
+MF1='nizka':'trimf',[-3.667 -2 -0.3333]
+MF2='trocha_nizka':'trimf',[-2.662 -1 0.6725]
+MF3='dobra':'trimf',[-1.867 0 1.47]
+MF4='vysoka':'trimf',[-1.15 1 2.85]
+MF5='prilis_vysoka':'trimf',[0.007692 2 4.008]
+
+[Input2]
+Name='zmena_hladiny'
+Range=[-0.3 0.3]
+NumMFs=3
+MF1='zaporna_zmena':'trimf',[-0.55 -0.3 -0.05]
+MF2='ziadna_zmena':'trimf',[-0.25 0 0.25]
+MF3='kladna_zmena':'trimf',[0.05 0.3 0.55]
+
+[Output1]
+Name='ventil'
+Range=[-0.2 0.2]
+NumMFs=3
+MF1='silno_privri':'trimf',[-0.3667 -0.2 -0.03333]
+MF2='zavri':'trimf',[-0.1667 0 0.1667]
+MF3='silno_otvor':'trimf',[0.03333 0.2 0.3667]
+
+[Rules]
+1 2, 3 (1) : 1
+1 3, 3 (1) : 1
+1 1, 3 (1) : 1
