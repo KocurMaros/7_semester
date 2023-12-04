@@ -2,25 +2,26 @@ clc
 clear
 close all
 l = 0.58;
+N_el_bremeno = 4.18e+3;
+N_el_vozik = 4.18e+3;
 F_cart_num = [0	0	0.217598139970441];
 F_cart_den = [2.813749053553513e-05	1	0];
 
 F_pend_num = [-1.37069413493978	0	0];
 F_pend_den = [1	0.0125366535496897	12.9568004970019];
-sim_time = 100;
+sim_time = 60; 
 sim_step = 0.01; 
 
 % lpop = 20;
 % numgen=30;
 lpop = 40;
 numgen=30;
-u = 5;
-lstring=3;
+u = 10;
+lstring=4;
 pid_space = u;
 
 Space=[ones(1,lstring)*(0); ones(1,lstring)*pid_space];
-Space(2,1) = 2;
-Space(2,2) = 2;
+Space(2,4) = 100;
 Delta=Space(2,:)/100;   
 
 set_param('craneGA','FastRestart','on')
@@ -30,20 +31,39 @@ evolutions=zeros(1,numgen);
 Fit = zeros(1,lpop);
 tic
 e_min = 10e100;
+
+
+sig = 0:sim_step:sim_time;
+first_step = find(sig == 6);
+second_step = find(sig == 36);
+
+
 for gen=1:numgen
     for i=1:lpop
-        disp(gen+"/"+numgen+" "+ i)
         P = Pop(i,1);
+        P1 = Pop(i,1);
         I = Pop(i,2);
         C = Pop(i,3);
         
         try
             out=sim("craneGA");
             % Fit(i) = sum(abs(out.e.Data)+abs(out.u.Data)+abs(out.e1.Data)+abs(out.u1.Data));
-            Fit(i) = sum(abs(out.e.Data).^2+abs(out.y.Data).*2);
-            if(max(out.y_motor.Data)>0.4)
+
+            Fit(i) = sum(abs(out.e.Data).^2+abs(out.y.Data));
+            % out.w.Data(first_step:second_step) = out.w.Data(first_step:second_step) - 0.2; 
+            trash = decide_if_value_in_interval_is_less_than_input_value(out.y_motor.Data, out.w.Data, first_step, second_step);
+            trash2 = decide_if_value_in_interval_is_more_than_input_value(out.y_motor.Data, out.w.Data, second_step);
+            
+            if(sum(trash == 1) < sum(trash == 0))
                 Fit(i) = 10e20;
             end
+            if(sum(trash2 == 1) < sum(trash2 == 0))
+                Fit(i) = 10e20;
+            end
+            
+            % if(max(out.y_motor.Data)>0.3)
+            %     Fit(i) = 10e20;
+            % end
             if(Fit(i) < e_min)
                 BEST.Pop = Pop;
                 BEST.i = i;
@@ -51,6 +71,7 @@ for gen=1:numgen
         catch
             Fit(i) = 10e20;
         end
+        disp(gen+"/"+numgen+" "+ i + " " + Fit(i))
     end
     evolutions1(gen)=min(Fit);	% convergence graph of the solution
     % GA
