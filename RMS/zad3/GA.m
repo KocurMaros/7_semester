@@ -15,13 +15,13 @@ sim_step = 0.01;
 % lpop = 20;
 % numgen=30;
 lpop = 40;
-numgen=30;
+numgen=40;
 u = 10;
-lstring=4;
+lstring=5;
 pid_space = u;
 
 Space=[ones(1,lstring)*(0); ones(1,lstring)*pid_space];
-Space(2,4) = 100;
+Space(2,5) = 100;
 Delta=Space(2,:)/100;   
 
 set_param('craneGA','FastRestart','on')
@@ -34,33 +34,52 @@ e_min = 10e100;
 
 
 sig = 0:sim_step:sim_time;
-first_step = find(sig == 6);
-second_step = find(sig == 36);
+first_step = find(sig == 10);
+second_step = find(sig == 35);
 
 
 for gen=1:numgen
     for i=1:lpop
         P = Pop(i,1);
-        P1 = Pop(i,1);
         I = Pop(i,2);
-        C = Pop(i,3);
+        P1 = Pop(i,3);
+        I1 = Pop(i,4);
+        C = Pop(i,5);
         
         try
             out=sim("craneGA");
             % Fit(i) = sum(abs(out.e.Data)+abs(out.u.Data)+abs(out.e1.Data)+abs(out.u1.Data));
 
-            Fit(i) = sum(abs(out.e.Data).^2+abs(out.y.Data));
+            % overshoot1 = calculate_overshoot(out.y_motor.Data(first_step:second_step));
+            % overshoot2 = calculate_overshoot(out.y_motor.Data(second_step:end));
+            % 
+            % rise1 = calculate_rise_time(out.y_motor.Time(first_step:second_step),out.y_motor.Data(first_step:second_step),40);
+            % rise2 = calculate_rise_time(out.y_motor.Time(second_step:end),out.y_motor.Data(second_step:end),60);
+            % 
+            % settle1 = calculate_settling_time(out.y_motor.Time(first_step:second_step),out.y_motor.Data(first_step:second_step),40);
+            % settle2 = calculate_settling_time(out.y_motor.Time(second_step:end),out.y_motor.Data(second_step:end),60);
+            % 
+            % Fit(i) = abs(1.2 * overshoot1+ 1.2 * overshoot2 + 0.6 * rise1 +0.6 * rise2 + 0.8 * settle1 +0.8 * settle2 + sum(abs(out.e.Data).*2 + 5*abs(out.y.Data)));
+
+            % Fit(i) = sum(abs(out.e.Data)+abs(out.de.Data)+abs(out.y.Data));
+            Fit(i) = sum(abs(out.e.Data).^2+abs(out.de.Data).^2)+sum(abs(out.u.Data)); % +abs(out.u.Data)
             % out.w.Data(first_step:second_step) = out.w.Data(first_step:second_step) - 0.2; 
-            trash = decide_if_value_in_interval_is_less_than_input_value(out.y_motor.Data, out.w.Data, first_step, second_step);
-            trash2 = decide_if_value_in_interval_is_more_than_input_value(out.y_motor.Data, out.w.Data, second_step);
+            % trash = decide_if_value_in_interval_is_less_than_input_value(out.y_motor.Data, out.w.Data, first_step, second_step);
+            % trash = decide_if_value_in_interval_is_less_than_input_value(out.y_motor.Data, out.w.Data, 1, first_step);
             
-            if(sum(trash == 1) < sum(trash == 0))
-                Fit(i) = 10e20;
-            end
-            if(sum(trash2 == 1) < sum(trash2 == 0))
-                Fit(i) = 10e20;
-            end
+            % trash2 = decide_if_value_in_interval_is_more_than_input_value(out.y_motor.Data, out.w.Data-0.05, second_step);
+            % 
+            % if(sum(trash == 1) < sum(trash == 0))
+            %     Fit(i) = 10e20;
+            % end
+            % if(max(out.w.Data(1:first_step)) < 0.28)
+            %     Fit(i) = 10e20;
+            % end
             
+            % if(sum(trash2 == 1) < sum(trash2 == 0))
+            %     Fit(i) = 10e20;
+            % end
+            % 
             % if(max(out.y_motor.Data)>0.3)
             %     Fit(i) = 10e20;
             % end
@@ -91,4 +110,5 @@ plot(out.y)
 % plot(out.u)
 % hold on 
 % plot(out.u1)
+save("meranie_6_4.mat");
 toc
