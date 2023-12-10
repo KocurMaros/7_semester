@@ -1,0 +1,31 @@
+\AddToHook{cmd/section/before}{\clearpage}
+\section{Úlohy}
+Vypracujte písomný referát, ktorý má obsahovať:
+\begin{enumerate}
+    \item Identifikácia reálnej sústavy žeriava z nameraných údajov.
+    \item Simulačný model získaný z identifikácie.
+    \item Návrh vybranej riadiacej štruktúry polohy bremena žeriavu a overenie na simulačnom modeli.
+    \item Simulačné overenie kvality riadenia pre navrhnutý typ regulátora pomocou trajektórie štvorec ABCD, kde A[0.1, 0.1], B[0.3, 0.1], C[0.3, 0.3], D[0.1,0.3] [m]. Čas celkového polohovania: < 1 minúta.
+\end{enumerate}
+
+\begin{enumerate}
+    \item Rovnaký experiment realizujte na reálnom zariadení.
+    \item Simulačne aj na reálnom systéme overte vplyv poruchy (úder rukou do bremena, vplyv ventilátora).
+    \item Vyhodnotenie dosiahnutých výsledkov.
+    \item Použitú literatúru.
+\end{enumerate}
+\subsection{Parametre modelu}
+
+Žeriav pozostáva z polohovacieho mechanizmu, z výkonovej jednotky, jednosmerného motora s prevodovkou, IRC snímača polohy pojazdu a snímača výchylky kyvadla. \newline
+Mechanické obmedzenie polohovacieho mechanizmu v osi X: <0, 0.499m>\newline
+Mechanické obmedzenie polohovacieho mechanizmu v osi Y: <0, 0.629m>\newline
+Signál vstupujúci do meniča z PC (matlab schémy): u(t)=<-1,1>. Tento signál predstavuje vstupný moment pre generátor momentu. Pre riadiacu premennú platí rozsah: u(t) <-1,1>. \newline
+Rozlišovacia schopnosť IRC snímača výchylky bremena: 15e-4 [rad]\newline
+Rozlišovacia schopnosť IRC snímača polohy vozíka: 5.8157e-5 [m]\newline
+Perióda vzorkovania: Tvz=10 ms.\newline
+\section{Riešenie}
+Na reálnom zariadení sme na motor priviedli 80\% napätia na 2 sekundy potom sme ho znižili na 40\% na ďalšie 2 sekundy. Meranie trvalo približne 35 sekúnd. Z nameraných dát sme postupne identifikovali žeriav a kyvadlo.
+\section{Identifikácia}
+\section{Simulácia}
+\section{Odhad parametrov}
+\section{Merania}

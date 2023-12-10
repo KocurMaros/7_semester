@@ -1,0 +1,11 @@
+Úlohou tohto zadania bolo namodelovať a simulovať riadenie dvojmotorového systému s pružným členom.
+
+Na riadenie sme použili PI regulátor, ktorého parametre sme hľadali pomocou genetického algoritmu. Súčet odchýlky regulovanej sústavy a akčnej veličiny sme použili ako fitnes funkciu ktorú sme minimalizovali. Výsledkom algoritmu boli parametre regulátora. \ref{GA}. Následne sme s nájdenými parametrami otestovali rôzne prevody \ref{prevody}, koeficienty tuhosti \ref{tuhost} a koeficienty tlmenia \ref{tlmenie}.
+
+V sekcii prevody \ref{prevody} môžeme pozorovať, že regulátor si vedel dobre poradiť aj s inými prevodovkami na ktoré bol navrhnutý. Systém mal zo začiatku oneskorenie čo mohlo spôsobovať suché trenie a pomalší nábeh systému na žiadanú veličinu a keď že hodnoty uhlovej rýchlosti na úseku 1 až 1.5 sekundy neboli vysoké tak genetický algoritmus zmenu nebral ako veľkú chybu a zároveň sme fitnes funkciou chceli obmedziť vplyv akčného zásahu takže akčný zásah mal rovnakú váhu ako regulačná odchýlka, čo taktiež spôsobilo oneskorenie nábehu systému.
+
+Testovali sme aj vplyv koeficientu tuhosti \ref{tuhost} pri prevodovom stupni 20. Menili sme ho s faktorom 10, čiže z 0.5 na 0.05 atď. a na závislosti rýchlosti záťaže od času môžme pozorovať, že systém reagoval na zmenu tuhosti veľmi dobre. Vyššou rýchlosťou sa musel točiť hnací motor aby pri nízkej hodnote $K_e$, hnaný motor dosiahol žiadanú rýchlosť. Z čoho vyplýva, že znižovaním koeficientu tuhosti je systém viac pružný, čo znamená aby sa hnaný motor rozbehol, hnací motor dosiahne vyššiu rýchlosť.
+
+Zmenou koeficientu tlmenia \ref{tlmenie}, sme zistili, že mal vplyv na rozbeh hnaného motora. Menili sme ho s faktorom 10, čiže z 0.5 na 0.05 atď. a ak bol väčší ako koeficient pre ktorý bol regulátor navrhnutý tak pri rozbehu systému sme nemali kmitanie a ak sme koeficient zväčšovali rýchlosť hnaného motora viac oscilovala pri rozbehu.
+
+Momenty motora vo všetkých experimentoch sa nedostali na maximum, čím sme obmedzili saturáciu. Pre lepšie dosiahnuté výsledky aby motor mal väčší moment by som odporučil v genetickom algoritme zmenšiť váhu akčnej veličiny.
