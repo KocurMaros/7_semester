@@ -1,0 +1,33 @@
+[System]
+Name='fuzkor_1'
+Type='mamdani'
+Version=2.0
+NumInputs=1
+NumOutputs=1
+NumRules=3
+AndMethod='min'
+OrMethod='max'
+ImpMethod='min'
+AggMethod='max'
+DefuzzMethod='centroid'
+
+[Input1]
+Name='Qpor'
+Range=[-2 2]
+NumMFs=3
+MF1='vysoky':'gaussmf',[0.4 -1.2]
+MF2='nizky':'gaussmf',[0.4 1.2]
+MF3='normalny':'gaussmf',[0.4 0]
+
+[Output1]
+Name='uc'
+Range=[-0.2 0.2]
+NumMFs=3
+MF1='close':'trimf',[-0.15 -0.0932 -0.0287]
+MF2='no_change':'trimf',[-0.075 0 0.075]
+MF3='open':'trimf',[0.0249051233396585 0.0899051233396585 0.149905123339658]
+
+[Rules]
+1, 2 (1) : 1
+2, 1 (1) : 1
+1, 3 (1) : 1
